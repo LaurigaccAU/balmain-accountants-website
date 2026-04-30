@@ -5,878 +5,194 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Balmain Accountants</title>
-
   <link rel="icon" type="image/png" href="balmain-logo.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #f5f5f5;
-      color: #1f2933;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    header {
-      width: 100%;
-      background: #ffffff;
-      border-bottom: 1px solid #e8e8e8;
-    }
-
-    .navbar {
-      max-width: 1550px;
-      margin: 0 auto;
-      padding: 14px 42px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 32px;
-    }
-
-    .logo-section {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-    }
-
-    .logo-section img {
-      width: 78px;
-      height: 78px;
-      object-fit: cover;
-      border-radius: 50%;
-      display: block;
-    }
-
-    .logo-text h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 3.2rem;
-      line-height: 0.9;
-      font-weight: 700;
-      color: #333333;
-      letter-spacing: 0.5px;
-    }
-
-    .logo-text p {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 0.95rem;
-      letter-spacing: 3px;
-      color: #555;
-      font-weight: 700;
-      margin-top: 7px;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 34px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
-
-    nav a {
-      color: #303030;
-      font-size: 1rem;
-      font-weight: 500;
-      transition: 0.3s;
-    }
-
-    nav a:hover {
-      color: #ff6b00;
-    }
-
-    .book-btn,
-    .hero-btn,
-    .dark-btn {
-      background: #ff6b00;
-      color: white;
-      padding: 17px 32px;
-      border-radius: 12px;
-      font-weight: 700;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      transition: 0.3s;
-    }
-
-    .book-btn:hover,
-    .hero-btn:hover,
-    .dark-btn:hover {
-      background: #e86000;
-      transform: translateY(-2px);
-      box-shadow: 0 12px 24px rgba(0,0,0,0.12);
-    }
-
-    .hero {
-      max-width: 1550px;
-      margin: 0 auto;
-      padding: 86px 50px 88px;
-      display: grid;
-      grid-template-columns: 1fr 1.1fr;
-      gap: 70px;
-      align-items: center;
-    }
-
-    .eyebrow {
-      color: #ff6b00;
-      font-weight: 800;
-      letter-spacing: 1.2px;
-      font-size: 0.95rem;
-      margin-bottom: 22px;
-      text-transform: uppercase;
-    }
-
-    .hero h2 {
-      font-family: 'Inter', sans-serif;
-      font-size: 4.4rem;
-      line-height: 1.05;
-      font-weight: 800;
-      color: #1f2933;
-      margin-bottom: 28px;
-      letter-spacing: -2px;
-    }
-
-    .hero h2 span {
-      color: #ff6b00;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      line-height: 1.8;
-      color: #4b5563;
-      max-width: 670px;
-      margin-bottom: 34px;
-    }
-
-    .hero-actions {
-      display: flex;
-      align-items: center;
-      gap: 26px;
-      flex-wrap: wrap;
-      margin-bottom: 40px;
-    }
-
-    .secondary-link {
-      color: #1f2933;
-      font-weight: 700;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .trust-row {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
-
-    .trust-card {
-      background: white;
-      border-radius: 14px;
-      padding: 16px 20px;
-      min-width: 190px;
-      box-shadow: 0 10px 28px rgba(0,0,0,0.06);
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .trust-logo {
-      width: 46px;
-      height: 46px;
-      object-fit: contain;
-      display: block;
-    }
-
-    .xero-badge {
-      width: 46px;
-      height: 46px;
-      border-radius: 50%;
-      background: #13b5ea;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-      font-weight: 700;
-      text-transform: lowercase;
-      font-family: Arial, sans-serif;
-    }
-
-    .trust-card strong {
-      display: block;
-      font-size: 0.95rem;
-      color: #1f2933;
-    }
-
-    .trust-card span {
-      font-size: 0.82rem;
-      color: #6b7280;
-    }
-
-    .stars {
-      color: #ff6b00;
-      letter-spacing: 2px;
-      font-size: 0.95rem;
-      margin-top: 3px;
-    }
-
-    .hero-image {
-      width: 100%;
-      min-height: 560px;
-      background:
-        linear-gradient(90deg, rgba(245,245,245,0.02), rgba(245,245,245,0.12)),
-        url("home-hero.png");
-      background-size: cover;
-      background-position: center;
-      border-radius: 0;
-    }
-
-    .logo-strip {
-      background: #ffffff;
-      border-top: 1px solid #e8e8e8;
-      border-bottom: 1px solid #e8e8e8;
-      padding: 26px 40px;
-      text-align: center;
-    }
-
-    .logo-strip p {
-      font-size: 0.82rem;
-      font-weight: 800;
-      letter-spacing: 1.7px;
-      color: #747474;
-      text-transform: uppercase;
-      margin-bottom: 20px;
-    }
-
-    .client-names {
-      max-width: 1150px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 28px;
-      align-items: center;
-      color: #333;
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 700;
-      font-size: 1.45rem;
-      opacity: 0.8;
-    }
-
-    .services-preview {
-      background: #ffffff;
-      padding: 88px 50px 96px;
-    }
-
-    .section-inner {
-      max-width: 1400px;
-      margin: 0 auto;
-    }
-
-    .section-label {
-      color: #ff6b00;
-      font-weight: 800;
-      text-transform: uppercase;
-      font-size: 0.9rem;
-      letter-spacing: 1px;
-      margin-bottom: 14px;
-    }
-
-    .services-preview h3 {
-      font-size: 2.4rem;
-      line-height: 1.2;
-      color: #1f2933;
-      margin-bottom: 38px;
-      font-weight: 800;
-      letter-spacing: -1px;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 24px;
-    }
-
-    .card {
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
-      border-radius: 14px;
-      padding: 28px 24px;
-      transition: 0.3s;
-      min-height: 255px;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 18px 40px rgba(0,0,0,0.08);
-      border-color: rgba(255,107,0,0.4);
-    }
-
-    .service-icon {
-      width: 48px;
-      height: 48px;
-      margin-bottom: 22px;
-      color: #ff6b00;
-    }
-
-    .card h4 {
-      font-size: 1.15rem;
-      color: #1f2933;
-      margin-bottom: 14px;
-      font-weight: 800;
-    }
-
-    .card p {
-      color: #4b5563;
-      line-height: 1.7;
-      font-size: 0.95rem;
-      margin-bottom: 18px;
-    }
-
-    .learn-more {
-      color: #ff6b00;
-      font-weight: 800;
-      font-size: 0.92rem;
-    }
-
-    .stats {
-      background: #1d242b;
-      padding: 48px 50px;
-      color: white;
-    }
-
-    .stats-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      text-align: center;
-    }
-
-    .stats h4 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 4rem;
-      color: #ffffff;
-      line-height: 1;
-    }
-
-    .stats h4 span {
-      color: #ff6b00;
-    }
-
-    .stats p {
-      color: #ffffff;
-      font-weight: 700;
-      letter-spacing: 0.8px;
-      margin-top: 8px;
-      text-transform: uppercase;
-      font-size: 0.85rem;
-    }
-
-    .why-section {
-      background: #ffffff;
-      padding: 0 50px;
-    }
-
-    .why-grid {
-      max-width: 1400px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      min-height: 520px;
-    }
-
-    .why-text {
-      padding: 78px 52px 78px 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .why-text h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 3.8rem;
-      line-height: 1;
-      margin-bottom: 24px;
-      color: #1f2933;
-    }
-
-    .why-text h3 span {
-      color: #ff6b00;
-    }
-
-    .why-text p {
-      color: #4b5563;
-      line-height: 1.9;
-      font-size: 1.05rem;
-      margin-bottom: 24px;
-      max-width: 560px;
-    }
-
-    .ticks {
-      list-style: none;
-      margin-bottom: 30px;
-    }
-
-    .ticks li {
-      margin-bottom: 10px;
-      color: #374151;
-      font-weight: 500;
-    }
-
-    .ticks li::before {
-      content: "✓";
-      color: #ff6b00;
-      font-weight: 800;
-      margin-right: 10px;
-    }
-
-    .why-image {
-      background: url("why-balmain.jpg");
-      background-size: cover;
-      background-position: center;
-      min-height: 520px;
-    }
-
-    .bottom-cta {
-      max-width: 1400px;
-      margin: 0 auto;
-      transform: translateY(50px);
-      background: #1d242b;
-      border-radius: 18px;
-      padding: 34px 44px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 28px;
-      color: white;
-      box-shadow: 0 18px 45px rgba(0,0,0,0.18);
-    }
-
-    .bottom-cta h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2.6rem;
-      line-height: 1;
-      margin-bottom: 8px;
-    }
-
-    .bottom-cta p {
-      color: #e5e7eb;
-      font-size: 1rem;
-    }
-
-    .spacer {
-      height: 90px;
-      background: #ffffff;
-    }
-
-    footer {
-      background: #111;
-      color: white;
-      text-align: center;
-      padding: 30px 20px;
-      font-size: 0.95rem;
-    }
-
-    @media (max-width: 1200px) {
-      .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      nav {
-        width: 100%;
-        justify-content: flex-start;
-      }
-
-      .hero {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-image {
-        min-height: 440px;
-      }
-
-      .cards {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .client-names {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .why-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .why-text {
-        padding-right: 0;
-      }
-
-      .bottom-cta {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .navbar {
-        padding: 18px 22px;
-      }
-
-      .logo-section {
-        flex-direction: column;
-        text-align: center;
-        align-items: flex-start;
-      }
-
-      .logo-section img {
-        width: 66px;
-        height: 66px;
-      }
-
-      .logo-text h1 {
-        font-size: 2.2rem;
-      }
-
-      .logo-text p {
-        font-size: 0.82rem;
-        letter-spacing: 2px;
-      }
-
-      nav {
-        gap: 18px;
-      }
-
-      .book-btn {
-        padding: 14px 22px;
-      }
-
-      .hero {
-        padding: 52px 24px 68px;
-        gap: 36px;
-      }
-
-      .hero h2 {
-        font-size: 3rem;
-      }
-
-      .hero p {
-        font-size: 1.05rem;
-      }
-
-      .hero-image {
-        min-height: 330px;
-      }
-
-      .trust-row {
-        flex-direction: column;
-      }
-
-      .client-names {
-        grid-template-columns: 1fr;
-      }
-
-      .services-preview,
-      .why-section {
-        padding-left: 24px;
-        padding-right: 24px;
-      }
-
-      .cards {
-        grid-template-columns: 1fr;
-      }
-
-      .stats-inner {
-        grid-template-columns: 1fr;
-      }
-
-      .why-text h3 {
-        font-size: 3rem;
-      }
-
-      .bottom-cta {
-        margin-left: 24px;
-        margin-right: 24px;
-        padding: 28px;
-      }
-
-      .bottom-cta h3 {
-        font-size: 2.2rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-  <header>
-    <div class="navbar">
+<header>
+  <div class="navbar">
+    <div class="logo-section">
+      <img src="balmain-logo.png" alt="Balmain Accountants Logo" />
+      <div class="logo-text">
+        <h1>BALMAIN ACCOUNTANTS</h1>
+        <p>SOLVING COMPLEX FINANCIAL MATTERS</p>
+      </div>
+    </div>
 
-      <div class="logo-section">
-        <img src="balmain-logo.png" alt="Balmain Accountants Logo" />
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a class="book-btn" href="contact.html">Book Consultation →</a>
+    </nav>
+  </div>
+</header>
 
-        <div class="logo-text">
-          <h1>BALMAIN ACCOUNTANTS</h1>
-          <p>SOLVING COMPLEX FINANCIAL MATTERS</p>
+<section class="hero">
+  <div>
+    <div class="eyebrow">ACCOUNTANTS. ADVISORS. PARTNERS.</div>
+
+    <h2>
+      Strategic financial advice for
+      <span>ambitious</span> businesses.
+    </h2>
+
+    <p>
+      We go beyond the numbers to help you build a stronger, more profitable and future-ready business.
+    </p>
+
+    <div class="hero-actions">
+      <a href="contact.html" class="hero-btn">Book a Consultation →</a>
+      <a href="services.html" class="secondary-link">Our Services →</a>
+    </div>
+
+    <div class="trust-row">
+      <div class="trust-card">
+        <img src="google-logo.png" alt="Google Rating" class="trust-logo">
+        <div>
+          <strong>Google</strong>
+          <span>5.0 Rating</span>
+          <div class="stars">★★★★★</div>
         </div>
       </div>
 
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
-        <a class="book-btn" href="contact.html">Book Consultation →</a>
-      </nav>
-
+      <div class="trust-card">
+        <div class="xero-badge">xero</div>
+        <div>
+          <strong>Xero</strong>
+          <span>Bronze Partner</span>
+        </div>
+      </div>
     </div>
-  </header>
+  </div>
 
-  <section class="hero">
+  <div class="hero-image"></div>
+</section>
 
+<section class="logo-strip">
+  <p>Trusted by business owners across Sydney</p>
+
+  <div class="client-names">
+    <div>Business Groups</div>
+    <div>Property Investors</div>
+    <div>Private Clients</div>
+    <div>Growing Companies</div>
+    <div>Family Businesses</div>
+  </div>
+</section>
+
+<section class="services-preview">
+  <div class="section-inner">
+    <div class="section-label">How we can help</div>
+    <h3>Tailored solutions. Lasting impact.</h3>
+
+    <div class="cards">
+      <div class="card">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+          <path d="M4 19V5"></path><path d="M4 19H20"></path><path d="M7 16L11 12L14 14L20 8"></path><path d="M17 8H20V11"></path>
+        </svg>
+        <h4>Business Advisory</h4>
+        <p>Strategic advice to help you grow, improve profitability and achieve your goals.</p>
+        <a href="services.html" class="learn-more">Learn more →</a>
+      </div>
+
+      <div class="card">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+          <path d="M7 3H14L19 8V21H7V3Z"></path><path d="M14 3V8H19"></path><path d="M10 13H16"></path><path d="M10 17H16"></path>
+        </svg>
+        <h4>Taxation Services</h4>
+        <p>Minimise tax and stay compliant with proactive, strategic tax planning.</p>
+        <a href="services.html" class="learn-more">Learn more →</a>
+      </div>
+
+      <div class="card">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+          <path d="M7 18H17A4 4 0 0 0 17 10A6 6 0 0 0 5.5 8A4.8 4.8 0 0 0 7 18Z"></path>
+        </svg>
+        <h4>Cloud Accounting</h4>
+        <p>Automated, efficient and real-time bookkeeping with modern accounting systems.</p>
+        <a href="services.html" class="learn-more">Learn more →</a>
+      </div>
+
+      <div class="card">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+          <circle cx="8" cy="8" r="3"></circle><circle cx="16" cy="8" r="3"></circle><path d="M3 20A5 5 0 0 1 13 20"></path><path d="M11 20A5 5 0 0 1 21 20"></path>
+        </svg>
+        <h4>Client Advisory</h4>
+        <p>Responsive advice and practical support for long-term business clarity.</p>
+        <a href="services.html" class="learn-more">Learn more →</a>
+      </div>
+
+      <div class="card">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+          <path d="M12 3V12H21"></path><circle cx="12" cy="12" r="9"></circle>
+        </svg>
+        <h4>Wealth & Structure</h4>
+        <p>Protect and grow your wealth with the right structure and strategy.</p>
+        <a href="services.html" class="learn-more">Learn more →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="stats-inner">
     <div>
-      <div class="eyebrow">ACCOUNTANTS. ADVISORS. PARTNERS.</div>
+      <h4>20<span>+</span></h4>
+      <p>Years of Experience</p>
+    </div>
+    <div>
+      <h4>98<span>%</span></h4>
+      <p>Client Retention Rate</p>
+    </div>
+  </div>
+</section>
 
-      <h2>
-        Strategic financial advice for
-        <span>ambitious</span> businesses.
-      </h2>
+<section class="why-section">
+  <div class="why-grid">
+    <div class="why-text">
+      <div class="section-label">Why Balmain Accountants</div>
+      <h3>More than just <span>accountants.</span></h3>
 
       <p>
-        We go beyond the numbers to help you build a stronger, more profitable and future-ready business.
+        We are your strategic partners, committed to your long-term success. Our team combines deep technical expertise with commercial insight to deliver real results.
       </p>
 
-      <div class="hero-actions">
-        <a href="contact.html" class="hero-btn">Book a Consultation →</a>
-        <a href="services.html" class="secondary-link">Our Services →</a>
-      </div>
+      <ul class="ticks">
+        <li>Proactive and strategic approach</li>
+        <li>Clear communication, always</li>
+        <li>Tailored solutions for your business</li>
+      </ul>
 
-      <div class="trust-row">
-
-        <div class="trust-card">
-          <img src="google-logo.png" alt="Google Rating" class="trust-logo">
-
-          <div>
-            <strong>Google</strong>
-            <span>5.0 Rating</span>
-            <div class="stars">★★★★★</div>
-          </div>
-        </div>
-
-        <div class="trust-card">
-          <div class="xero-badge">xero</div>
-
-          <div>
-            <strong>Xero</strong>
-            <span>Bronze Partner</span>
-          </div>
-        </div>
-
-      </div>
+      <a href="about.html" class="dark-btn">About Us →</a>
     </div>
 
-    <div class="hero-image"></div>
+    <div class="why-image"></div>
+  </div>
 
-  </section>
-
-  <section class="logo-strip">
-
-    <p>Trusted by business owners across Sydney</p>
-
-    <div class="client-names">
-      <div>Business Groups</div>
-      <div>Property Investors</div>
-      <div>Private Clients</div>
-      <div>Growing Companies</div>
-      <div>Family Businesses</div>
+  <div class="bottom-cta">
+    <div>
+      <h3>Let’s build a better future for your business.</h3>
+      <p>Book a free 30-minute consultation and see how we can help.</p>
     </div>
 
-  </section>
+    <a href="contact.html" class="book-btn">Book a Consultation →</a>
+  </div>
+</section>
 
-  <section class="services-preview">
+<div class="spacer"></div>
 
-    <div class="section-inner">
-
-      <div class="section-label">How we can help</div>
-
-      <h3>Tailored solutions. Lasting impact.</h3>
-
-      <div class="cards">
-
-        <div class="card">
-
-          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
-            <path d="M4 19V5"></path>
-            <path d="M4 19H20"></path>
-            <path d="M7 16L11 12L14 14L20 8"></path>
-            <path d="M17 8H20V11"></path>
-          </svg>
-
-          <h4>Business Advisory</h4>
-
-          <p>
-            Strategic advice to help you grow, improve profitability and achieve your goals.
-          </p>
-
-          <a href="services.html" class="learn-more">Learn more →</a>
-
-        </div>
-
-        <div class="card">
-
-          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
-            <path d="M7 3H14L19 8V21H7V3Z"></path>
-            <path d="M14 3V8H19"></path>
-            <path d="M10 13H16"></path>
-            <path d="M10 17H16"></path>
-          </svg>
-
-          <h4>Taxation Services</h4>
-
-          <p>
-            Minimise tax and stay compliant with proactive, strategic tax planning.
-          </p>
-
-          <a href="services.html" class="learn-more">Learn more →</a>
-
-        </div>
-
-        <div class="card">
-
-          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
-            <path d="M7 18H17A4 4 0 0 0 17 10A6 6 0 0 0 5.5 8A4.8 4.8 0 0 0 7 18Z"></path>
-          </svg>
-
-          <h4>Cloud Accounting</h4>
-
-          <p>
-            Automated, efficient and real-time bookkeeping with modern accounting systems.
-          </p>
-
-          <a href="services.html" class="learn-more">Learn more →</a>
-
-        </div>
-
-        <div class="card">
-
-          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
-            <circle cx="8" cy="8" r="3"></circle>
-            <circle cx="16" cy="8" r="3"></circle>
-            <path d="M3 20A5 5 0 0 1 13 20"></path>
-            <path d="M11 20A5 5 0 0 1 21 20"></path>
-          </svg>
-
-          <h4>Client Advisory</h4>
-
-          <p>
-            Responsive advice and practical support for long-term business clarity.
-          </p>
-
-          <a href="services.html" class="learn-more">Learn more →</a>
-
-        </div>
-
-        <div class="card">
-
-          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
-            <path d="M12 3V12H21"></path>
-            <circle cx="12" cy="12" r="9"></circle>
-          </svg>
-
-          <h4>Wealth & Structure</h4>
-
-          <p>
-            Protect and grow your wealth with the right structure and strategy.
-          </p>
-
-          <a href="services.html" class="learn-more">Learn more →</a>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <section class="stats">
-
-    <div class="stats-inner">
-
-      <div>
-        <h4>20<span>+</span></h4>
-        <p>Years of Experience</p>
-      </div>
-
-      <div>
-        <h4>98<span>%</span></h4>
-        <p>Client Retention Rate</p>
-      </div>
-
-    </div>
-
-  </section>
-
-  <section class="why-section">
-
-    <div class="why-grid">
-
-      <div class="why-text">
-
-        <div class="section-label">Why Balmain Accountants</div>
-
-        <h3>More than just <span>accountants.</span></h3>
-
-        <p>
-          We are your strategic partners, committed to your long-term success. Our team combines deep technical expertise with commercial insight to deliver real results.
-        </p>
-
-        <ul class="ticks">
-          <li>Proactive and strategic approach</li>
-          <li>Clear communication, always</li>
-          <li>Tailored solutions for your business</li>
-        </ul>
-
-        <a href="about.html" class="dark-btn">About Us →</a>
-
-      </div>
-
-      <div class="why-image"></div>
-
-    </div>
-
-    <div class="bottom-cta">
-
-      <div>
-        <h3>Let’s build a better future for your business.</h3>
-        <p>Book a free 30-minute consultation and see how we can help.</p>
-      </div>
-
-      <a href="contact.html" class="book-btn">Book a Consultation →</a>
-
-    </div>
-
-  </section>
-
-  <div class="spacer"></div>
-
-  <footer>
-    © 2026 Balmain Accountants. All rights reserved.
-  </footer>
+<footer>
+  © 2026 Balmain Accountants. All rights reserved.
+</footer>
 
 </body>
 </html>
