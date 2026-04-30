@@ -1,177 +1,432 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Balmain Accountants</title>
-  <link rel="icon" type="image/png" href="balmain-logo.png">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <style>
-    *{margin:0;padding:0;box-sizing:border-box}
-    body{background:#f7f7f7;color:#222;font-family:Arial,Helvetica,sans-serif}
+<title>Balmain Accountants</title>
+<link rel="icon" type="image/png" href="balmain-logo.png">
 
-    nav{
-      width:100%;padding:20px 5%;display:flex;justify-content:space-between;align-items:center;
-      background:white;position:fixed;top:0;z-index:1000;box-shadow:0 2px 10px rgba(0,0,0,.05);gap:40px
-    }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    .logo{display:flex;align-items:center;gap:16px;min-width:max-content}
-    .menu{display:flex;gap:35px;align-items:center;margin-left:auto}
-    .menu a{text-decoration:none;color:#333;font-weight:500;font-size:18px}
-    .menu a:hover{color:#ff6b00}
+<style>
 
-    .btn{
-      background:#ff6b00;color:white;padding:16px 28px;border-radius:12px;
-      text-decoration:none;font-weight:bold;display:inline-block
-    }
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-    .hero{
-      min-height:100vh;display:flex;align-items:center;justify-content:space-between;
-      gap:70px;padding:190px 5% 100px
-    }
+body{
+  font-family:'Inter',sans-serif;
+  background:#f5f5f5;
+  color:#2b2b2b;
+}
 
-    .hero-left,.hero-right{flex:1}
+/* HEADER */
 
-    .hero-left h1{
-      font-size:86px;line-height:1.05;margin-bottom:35px;
-      font-family:Georgia,serif;color:#222
-    }
+header{
+  background:white;
+  border-bottom:1px solid #ececec;
+}
 
-    .orange{color:#ff6b00}
+.navbar{
+  max-width:1400px;
+  margin:auto;
+  padding:18px 60px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
 
-    .hero-left p{
-      font-size:23px;line-height:1.7;color:#555;margin-bottom:45px;max-width:720px
-    }
+.logo-section{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
 
-    .hero-right img{
-      width:100%;border-radius:25px;box-shadow:0 25px 60px rgba(0,0,0,.12)
-    }
+.logo-section img{
+  width:72px;
+}
 
-    .services{
-      padding:120px 5%;background:white
-    }
+.logo-text h1{
+  font-family:'Cormorant Garamond',serif;
+  font-size:3rem;
+  line-height:1;
+  color:#303030;
+  letter-spacing:1px;
+}
 
-    .services h2{
-      font-size:60px;margin-bottom:60px;font-family:Georgia,serif;color:#222
-    }
+.logo-text p{
+  font-family:'Cormorant Garamond',serif;
+  letter-spacing:2px;
+  font-size:1rem;
+  margin-top:4px;
+  color:#666;
+}
 
-    .cards{
-      display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:35px
-    }
+nav{
+  display:flex;
+  align-items:center;
+  gap:38px;
+}
 
-    .card{
-      background:#f8f8f8;padding:45px;border-radius:24px;transition:.3s
-    }
+nav a{
+  text-decoration:none;
+  color:#333;
+  font-size:1.1rem;
+  transition:0.3s;
+}
 
-    .card:hover{transform:translateY(-10px);box-shadow:0 20px 40px rgba(0,0,0,.08)}
-    .card h3{font-size:28px;margin-bottom:20px;color:#ff6b00;font-family:Georgia,serif}
-    .card p{color:#555;line-height:1.8;font-size:18px}
+nav a:hover{
+  color:#ff6b00;
+}
 
-    .stats{
-      background:#1f1f1f;color:white;padding:100px 5%;
-      display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px;text-align:center
-    }
+.btn{
+  background:#ff6b00;
+  color:white;
+  padding:16px 34px;
+  border-radius:14px;
+  text-decoration:none;
+  font-weight:600;
+  display:inline-block;
+}
 
-    .stats h2{font-size:60px;color:#ff6b00;margin-bottom:10px;font-family:Georgia,serif}
-    .stats p{color:#ddd;font-size:18px;letter-spacing:1px}
+/* HERO */
 
-    .cta{
-      padding:130px 5%;text-align:center
-    }
+.hero{
+  max-width:1400px;
+  margin:auto;
+  padding:110px 60px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  align-items:center;
+}
 
-    .cta h2{
-      font-size:65px;margin-bottom:35px;font-family:Georgia,serif;color:#222;line-height:1.2
-    }
+.hero h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:5.3rem;
+  line-height:1;
+  color:#222;
+  margin-bottom:35px;
+}
 
-    footer{background:#111;color:white;padding:50px;text-align:center;font-size:16px}
+.hero span{
+  color:#ff6b00;
+}
 
-    @media(max-width:980px){
-      nav{flex-direction:column;align-items:center;gap:25px}
-      .logo{flex-direction:column;text-align:center}
-      .menu{margin-left:0;flex-wrap:wrap;justify-content:center;gap:22px}
-      .hero{flex-direction:column;text-align:center;padding-top:280px}
-      .hero-left h1{font-size:52px}
-      .hero-left p{margin:auto auto 40px}
-    }
-  </style>
+.hero p{
+  font-size:1.35rem;
+  line-height:1.8;
+  color:#555;
+  max-width:680px;
+  margin-bottom:40px;
+}
+
+.hero img{
+  width:100%;
+  height:520px;
+  object-fit:cover;
+  border-radius:28px;
+  box-shadow:0 25px 60px rgba(0,0,0,0.12);
+}
+
+/* SERVICES */
+
+.services{
+  background:white;
+  padding:100px 60px;
+}
+
+.services-inner{
+  max-width:1200px;
+  margin:auto;
+}
+
+.services h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:4rem;
+  margin-bottom:45px;
+  color:#222;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:28px;
+}
+
+.card{
+  background:#f8f8f8;
+  padding:35px;
+  border-radius:24px;
+  border-top:4px solid #ff6b00;
+}
+
+.card h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:2rem;
+  color:#222;
+  margin-bottom:18px;
+}
+
+.card p{
+  color:#555;
+  line-height:1.8;
+}
+
+/* STATS */
+
+.stats{
+  background:#1f1f1f;
+  padding:90px 60px;
+}
+
+.stats-inner{
+  max-width:900px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+  text-align:center;
+}
+
+.stats h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:4rem;
+  color:#ff6b00;
+}
+
+.stats p{
+  color:white;
+  font-size:1.15rem;
+  margin-top:10px;
+}
+
+/* CTA */
+
+.cta{
+  text-align:center;
+  padding:110px 60px;
+  background:#f5f5f5;
+}
+
+.cta h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:4.5rem;
+  line-height:1.1;
+  margin-bottom:35px;
+  color:#222;
+}
+
+footer{
+  background:#111;
+  color:white;
+  text-align:center;
+  padding:45px;
+}
+
+/* MOBILE */
+
+@media(max-width:1100px){
+
+  .navbar{
+    flex-direction:column;
+    gap:30px;
+    text-align:center;
+  }
+
+  nav{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .hero{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .hero p{
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .cards{
+    grid-template-columns:1fr 1fr;
+  }
+
+}
+
+@media(max-width:700px){
+
+  .navbar{
+    padding:18px 25px;
+  }
+
+  .logo-section{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .logo-text h1{
+    font-size:2rem;
+  }
+
+  .hero{
+    padding:70px 25px;
+  }
+
+  .hero h2{
+    font-size:3.4rem;
+  }
+
+  .hero img{
+    height:360px;
+  }
+
+  .services{
+    padding:70px 25px;
+  }
+
+  .cards{
+    grid-template-columns:1fr;
+  }
+
+  .stats-inner{
+    grid-template-columns:1fr;
+    gap:40px;
+  }
+
+  .cta h2{
+    font-size:3rem;
+  }
+
+}
+
+</style>
 </head>
 
 <body>
 
-<nav>
-  <div class="logo">
-    <img src="balmain-logo.png" alt="Balmain Logo" style="height:75px;width:75px;object-fit:cover;border-radius:50%;">
-    <div style="line-height:1.1;">
-      <div style="font-size:36px;font-weight:700;color:#2f2f2f;letter-spacing:0;font-family:Georgia,serif;">
-        BALMAIN ACCOUNTANTS
-      </div>
-      <div style="font-size:14px;color:#777;letter-spacing:2px;margin-top:6px;font-family:Georgia,serif;text-transform:uppercase;">
-        Solving Complex Financial Matters
-      </div>
+<header>
+
+<div class="navbar">
+
+  <div class="logo-section">
+
+    <img src="balmain-logo.png" alt="Balmain Accountants Logo">
+
+    <div class="logo-text">
+      <h1>BALMAIN ACCOUNTANTS</h1>
+      <p>SOLVING COMPLEX FINANCIAL MATTERS</p>
     </div>
+
   </div>
 
-  <div class="menu">
+  <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="services.html">Services</a>
     <a href="contact.html">Contact</a>
     <a href="contact.html" class="btn">Book Consultation</a>
-  </div>
-</nav>
+  </nav>
+
+</div>
+
+</header>
 
 <section class="hero">
-  <div class="hero-left">
-    <h1>Strategic financial advice for <span class="orange">ambitious</span> businesses.</h1>
-    <p>Modern accounting, taxation and advisory solutions helping Australian businesses grow with confidence and clarity.</p>
+
+  <div>
+
+    <h2>
+      Strategic financial advice for <span>ambitious</span> businesses.
+    </h2>
+
+    <p>
+      Modern accounting, taxation, financial statements and planning solutions helping Australian businesses grow with confidence and clarity.
+    </p>
+
     <a href="services.html" class="btn">Our Services</a>
+
   </div>
 
-  <div class="hero-right">
-    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1400&auto=format&fit=crop">
+  <div>
+
+    <img 
+      src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=1400&auto=format&fit=crop"
+      alt="Financial statements and planning">
+
   </div>
+
 </section>
 
 <section class="services">
-  <h2>Our Services</h2>
 
-  <div class="cards">
-    <div class="card">
-      <h3>Business Advisory</h3>
-      <p>Strategic financial advice and business growth consulting tailored to your objectives.</p>
+  <div class="services-inner">
+
+    <h2>Our Services</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>Taxation & Planning</h3>
+        <p>Tailored taxation support, compliance management and financial planning advice.</p>
+      </div>
+
+      <div class="card">
+        <h3>Business Advisory</h3>
+        <p>Strategic financial guidance to help businesses improve performance and grow.</p>
+      </div>
+
+      <div class="card">
+        <h3>Financial Reporting</h3>
+        <p>Clear financial statements, reporting and compliance support for businesses.</p>
+      </div>
+
+      <div class="card">
+        <h3>Corporate Advisory</h3>
+        <p>Practical advisory support for complex business and financial matters.</p>
+      </div>
+
     </div>
 
-    <div class="card">
-      <h3>Taxation Services</h3>
-      <p>Company, trust, BAS, GST and individual tax compliance solutions.</p>
-    </div>
-
-    <div class="card">
-      <h3>Cloud Accounting</h3>
-      <p>Xero bookkeeping, payroll, automation and reporting systems.</p>
-    </div>
-
-    <div class="card">
-      <h3>Property Accounting</h3>
-      <p>Investment property taxation and capital gains tax advisory services.</p>
-    </div>
   </div>
+
 </section>
 
 <section class="stats">
-  <div><h2>20+</h2><p>Years Experience</p></div>
-  <div><h2>500+</h2><p>Businesses Supported</p></div>
-  <div><h2>$2B+</h2><p>Client Revenue</p></div>
-  <div><h2>98%</h2><p>Client Retention</p></div>
+
+  <div class="stats-inner">
+
+    <div>
+      <h2>20+</h2>
+      <p>Years Experience</p>
+    </div>
+
+    <div>
+      <h2>98%+</h2>
+      <p>Client Retention</p>
+    </div>
+
+  </div>
+
 </section>
 
 <section class="cta">
-  <h2>Let's build a better future for your business.</h2>
+
+  <h2>
+    Let’s build a better financial future for your business.
+  </h2>
+
   <a href="contact.html" class="btn">Book Consultation</a>
+
 </section>
 
 <footer>
-  © 2020 Balmain Accountants. All rights reserved.
+  © 2026 Balmain Accountants. All rights reserved.
 </footer>
 
 </body>
