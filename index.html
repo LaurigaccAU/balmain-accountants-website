@@ -1,543 +1,539 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Balmain Accountants</title>
 
-<title>Balmain Accountants</title>
+  <link rel="icon" type="image/png" href="balmain-logo.png" />
 
-<link rel="icon" type="image/png" href="balmain-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    font-family:'Inter', sans-serif;
-    background:#f5f5f5;
-    color:#303030;
-}
-
-/* HEADER */
-
-header{
-    width:100%;
-    background:white;
-    border-bottom:1px solid #e5e5e5;
-}
-
-.navbar{
-    max-width:1500px;
-    margin:auto;
-    padding:16px 50px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.logo-section{
-    display:flex;
-    align-items:center;
-    gap:20px;
-}
-
-.logo-section img{
-    width:72px;
-    height:72px;
-    object-fit:cover;
-    border-radius:50%;
-}
-
-.logo-text h1{
-    font-family:'Cormorant Garamond', serif;
-    font-size:3.4rem;
-    font-weight:700;
-    line-height:0.9;
-    color:#303030;
-    letter-spacing:1px;
-}
-
-.logo-text p{
-    font-family:'Cormorant Garamond', serif;
-    font-size:1rem;
-    font-weight:600;
-    letter-spacing:3px;
-    color:#555;
-    margin-top:6px;
-}
-
-nav{
-    display:flex;
-    align-items:center;
-    gap:42px;
-}
-
-nav a{
-    text-decoration:none;
-    color:#303030;
-    font-size:1.15rem;
-    transition:0.3s;
-}
-
-nav a:hover{
-    color:#ff6b00;
-}
-
-.book-btn,
-.hero-btn{
-    background:#ff6b00;
-    color:white;
-    padding:18px 34px;
-    border-radius:12px;
-    text-decoration:none;
-    font-weight:600;
-    transition:0.3s;
-    display:inline-block;
-}
-
-.book-btn:hover,
-.hero-btn:hover{
-    transform:translateY(-2px);
-    box-shadow:0 10px 20px rgba(0,0,0,0.08);
-}
-
-/* HERO */
-
-.hero{
-    max-width:1500px;
-    margin:auto;
-    padding:110px 50px;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:70px;
-    align-items:center;
-}
-
-.hero h1{
-    font-family:'Cormorant Garamond', serif;
-    font-size:5.8rem;
-    line-height:0.95;
-    color:#222;
-    margin-bottom:35px;
-}
-
-.orange{
-    color:#ff6b00;
-}
-
-.hero p{
-    max-width:680px;
-    font-size:1.25rem;
-    line-height:1.9;
-    color:#555;
-    margin-bottom:40px;
-}
-
-.hero img{
-    width:100%;
-    height:540px;
-    object-fit:cover;
-    border-radius:28px;
-    box-shadow:0 25px 60px rgba(0,0,0,0.12);
-}
-
-/* INTRO */
-
-.intro{
-    background:white;
-    padding:110px 50px;
-    text-align:center;
-}
-
-.intro h2{
-    font-family:'Cormorant Garamond', serif;
-    font-size:4.5rem;
-    margin-bottom:30px;
-    color:#222;
-}
-
-.intro p{
-    max-width:1000px;
-    margin:auto;
-    font-size:1.25rem;
-    line-height:2;
-    color:#555;
-}
-
-/* DARK SECTION */
-
-.dark-section{
-    background:#1f1f1f;
-    color:white;
-    text-align:center;
-    padding:110px 50px;
-}
-
-.dark-section h2{
-    font-family:'Cormorant Garamond', serif;
-    font-size:4.5rem;
-    margin-bottom:30px;
-}
-
-.dark-section p{
-    max-width:1000px;
-    margin:auto;
-    color:#ddd;
-    font-size:1.25rem;
-    line-height:2;
-}
-
-/* STATS */
-
-.stats{
-    background:#181818;
-    padding:90px 50px;
-}
-
-.stats-inner{
-    max-width:900px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:70px;
-    text-align:center;
-}
-
-.stats h2{
-    font-family:'Cormorant Garamond', serif;
-    font-size:4.2rem;
-    color:#ff6b00;
-}
-
-.stats p{
-    color:white;
-    font-size:1.15rem;
-    margin-top:10px;
-}
-
-/* SERVICES */
-
-.services-preview{
-    background:white;
-    padding:110px 50px;
-}
-
-.services-inner{
-    max-width:1400px;
-    margin:auto;
-}
-
-.services-preview h2{
-    font-family:'Cormorant Garamond', serif;
-    font-size:4.3rem;
-    margin-bottom:45px;
-    color:#222;
-}
-
-.cards{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:28px;
-}
-
-.card{
-    background:#f8f8f8;
-    padding:35px;
-    border-radius:24px;
-    border-top:5px solid #ff6b00;
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 18px 35px rgba(0,0,0,0.08);
-}
-
-.card h3{
-    font-family:'Cormorant Garamond', serif;
-    font-size:2rem;
-    color:#222;
-    margin-bottom:18px;
-}
-
-.card p{
-    color:#555;
-    line-height:1.8;
-}
-
-/* CTA */
-
-.cta{
-    background:#f5f5f5;
-    text-align:center;
-    padding:110px 50px;
-}
-
-.cta h2{
-    font-family:'Cormorant Garamond', serif;
-    font-size:4rem;
-    margin-bottom:35px;
-    color:#222;
-}
-
-/* FOOTER */
-
-footer{
-    background:#111;
-    color:white;
-    text-align:center;
-    padding:45px;
-}
-
-/* MOBILE */
-
-@media(max-width:1200px){
-
-    .navbar{
-        flex-direction:column;
-        gap:30px;
-        text-align:center;
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    nav{
-        flex-wrap:wrap;
-        justify-content:center;
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f3f3f3;
+      color: #2f2f2f;
     }
 
-    .hero{
-        grid-template-columns:1fr;
-        text-align:center;
+    a {
+      text-decoration: none;
     }
 
-    .hero p{
-        margin-left:auto;
-        margin-right:auto;
+    /* HEADER */
+    header {
+      width: 100%;
+      background: #ffffff;
+      border-bottom: 1px solid #e6e6e6;
     }
 
-    .cards{
-        grid-template-columns:1fr 1fr;
+    .navbar {
+      max-width: 1550px;
+      margin: 0 auto;
+      padding: 10px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
     }
 
-}
-
-@media(max-width:700px){
-
-    .navbar{
-        padding:25px;
+    .logo-section {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      min-width: 0;
     }
 
-    .logo-section{
-        flex-direction:column;
-        text-align:center;
+    .logo-section img {
+      width: 82px;
+      height: 82px;
+      object-fit: contain;
+      display: block;
     }
 
-    .logo-text h1{
-        font-size:2.3rem;
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
-    .logo-text p{
-        font-size:0.9rem;
-        font-weight:600;
+    .logo-text h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.3rem;
+      line-height: 0.9;
+      font-weight: 700;
+      color: #3a3a3a;
+      letter-spacing: 0.5px;
     }
 
-    nav{
-        gap:25px;
+    .logo-text p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.95rem;
+      letter-spacing: 3px;
+      color: #5a5a5a;
+      font-weight: 700; /* made bolder */
+      margin-top: 6px;
     }
 
-    .hero{
-        padding:80px 25px;
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 34px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
 
-    .hero h1{
-        font-size:3.5rem;
+    nav a {
+      color: #333333;
+      font-size: 1rem;
+      font-weight: 400;
+      transition: 0.3s;
     }
 
-    .hero img{
-        height:360px;
+    nav a:hover {
+      color: #ff6b00;
     }
 
-    .intro,
-    .dark-section,
-    .services-preview,
-    .cta{
-        padding:75px 25px;
+    .book-btn {
+      background: #ff6b00;
+      color: white;
+      padding: 18px 34px;
+      border-radius: 14px;
+      font-weight: 600;
+      display: inline-block;
+      transition: 0.3s;
     }
 
-    .intro h2,
-    .dark-section h2,
-    .services-preview h2,
-    .cta h2{
-        font-size:3rem;
+    .book-btn:hover {
+      background: #e86000;
     }
 
-    .cards{
-        grid-template-columns:1fr;
+    /* HERO */
+    .hero {
+      max-width: 1550px;
+      margin: 0 auto;
+      padding: 70px 60px 90px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 70px;
     }
 
-    .stats-inner{
-        grid-template-columns:1fr;
-        gap:45px;
+    .hero-text h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 5.4rem;
+      line-height: 0.93;
+      font-weight: 700;
+      color: #232323;
+      margin-bottom: 32px;
     }
 
-}
+    .hero-text .orange {
+      color: #ff6b00;
+    }
 
-</style>
+    .hero-text p {
+      font-size: 1.18rem;
+      line-height: 1.8;
+      color: #58606a;
+      max-width: 690px;
+      margin-bottom: 34px;
+    }
+
+    .hero-btn {
+      background: #ff6b00;
+      color: white;
+      padding: 15px 28px;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 600;
+      display: inline-block;
+      transition: 0.3s;
+    }
+
+    .hero-btn:hover {
+      background: #e86000;
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 520px;
+      overflow: hidden;
+      border-radius: 0;           /* removed round corners */
+      box-shadow: none;           /* merging with page more */
+      background: transparent;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 0;           /* removed round corners */
+    }
+
+    /* INTRO */
+    .intro {
+      background: #ffffff;
+      padding: 90px 30px;
+      text-align: center;
+    }
+
+    .intro h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 4.5rem;
+      line-height: 1;
+      color: #232323;
+      margin-bottom: 30px;
+    }
+
+    .intro p {
+      max-width: 1020px;
+      margin: 0 auto;
+      font-size: 1.2rem;
+      line-height: 2;
+      color: #58606a;
+    }
+
+    /* DARK SECTION */
+    .dark-section {
+      background: #1c1c1e;
+      color: white;
+      text-align: center;
+      padding: 95px 30px;
+    }
+
+    .dark-section h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 4.8rem;
+      line-height: 1;
+      margin-bottom: 30px;
+      color: #ffffff;
+    }
+
+    .dark-section p {
+      max-width: 1050px;
+      margin: 0 auto;
+      font-size: 1.18rem;
+      line-height: 2;
+      color: #e5e5e5;
+    }
+
+    /* STATS */
+    .stats {
+      background: #ff6b00;
+      padding: 55px 30px;
+    }
+
+    .stats-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      text-align: center;
+    }
+
+    .stat h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.8rem;
+      color: white;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .stat p {
+      color: white;
+      font-size: 1.05rem;
+      font-weight: 500;
+      letter-spacing: 0.4px;
+    }
+
+    /* SERVICES PREVIEW */
+    .services-preview {
+      background: #ffffff;
+      padding: 90px 40px;
+    }
+
+    .services-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .services-preview h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 4rem;
+      color: #232323;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+    }
+
+    .card {
+      background: #f8f8f8;
+      border-top: 4px solid #ff6b00;
+      padding: 28px;
+    }
+
+    .card h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      color: #232323;
+      margin-bottom: 16px;
+    }
+
+    .card p {
+      color: #58606a;
+      line-height: 1.8;
+      font-size: 1rem;
+    }
+
+    /* CTA */
+    .cta {
+      background: #f3f3f3;
+      text-align: center;
+      padding: 90px 30px 100px;
+    }
+
+    .cta h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 4rem;
+      color: #232323;
+      margin-bottom: 30px;
+      line-height: 1.1;
+    }
+
+    footer {
+      background: #1b1b1b;
+      color: white;
+      text-align: center;
+      padding: 28px 20px;
+      font-size: 0.95rem;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1200px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        padding: 16px 20px;
+      }
+
+      .logo-section {
+        align-items: center;
+      }
+
+      .logo-section img {
+        width: 64px;
+        height: 64px;
+      }
+
+      .logo-text h1 {
+        font-size: 2.25rem;
+      }
+
+      .logo-text p {
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+      }
+
+      nav {
+        gap: 18px;
+      }
+
+      .book-btn {
+        padding: 14px 22px;
+      }
+
+      .hero {
+        padding: 45px 20px 65px;
+        gap: 35px;
+      }
+
+      .hero-text h2 {
+        font-size: 3.9rem;
+      }
+
+      .hero-text p {
+        font-size: 1.05rem;
+      }
+
+      .hero-image {
+        height: 350px;
+      }
+
+      .intro h3,
+      .dark-section h3,
+      .services-preview h3,
+      .cta h3 {
+        font-size: 3rem;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-inner {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<header>
-
+  <header>
     <div class="navbar">
-
-        <div class="logo-section">
-
-            <img src="balmain-logo.png" alt="Balmain Accountants Logo">
-
-            <div class="logo-text">
-                <h1>BALMAIN ACCOUNTANTS</h1>
-                <p>SOLVING COMPLEX FINANCIAL MATTERS</p>
-            </div>
-
+      <div class="logo-section">
+        <img src="balmain-logo.png" alt="Balmain Accountants Logo" />
+        <div class="logo-text">
+          <h1>BALMAIN ACCOUNTANTS</h1>
+          <p>SOLVING COMPLEX FINANCIAL MATTERS</p>
         </div>
+      </div>
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="contact.html">Contact</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a class="book-btn" href="contact.html">Book Consultation</a>
+      </nav>
+    </div>
+  </header>
 
-            <a href="contact.html" class="book-btn">
-                Book Consultation
-            </a>
-        </nav>
+  <section class="hero">
+    <div class="hero-text">
+      <h2>
+        Strategic financial advice for
+        <span class="orange">ambitious</span> businesses.
+      </h2>
 
+      <p>
+        Modern accounting, taxation, financial statements and planning solutions
+        helping Australian businesses grow with confidence and clarity.
+      </p>
+
+      <a href="services.html" class="hero-btn">Our Services</a>
     </div>
 
-</header>
-
-<section class="hero">
-
-    <div>
-
-        <h1>
-            Strategic financial advice for <span class="orange">ambitious</span> businesses.
-        </h1>
-
-        <p>
-            Modern accounting, taxation, financial statements and planning solutions helping Australian businesses grow with confidence and clarity.
-        </p>
-
-        <a href="services.html" class="hero-btn">
-            Our Services
-        </a>
-
+    <div class="hero-image">
+      <img
+        src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1400&q=80"
+        alt="Financial statements and planning"
+      />
     </div>
+  </section>
 
-    <div>
-
-        <img 
-            src="https://plus.unsplash.com/premium_photo-1661302901188-36b4f3c540e6?fm=jpg&ixlib=rb-4.0.3&q=80&w=1600"
-            alt="Financial statements and business planning">
-
-    </div>
-
-</section>
-
-<section class="intro">
-
-    <h2>A Modern Boutique Advisory Firm</h2>
-
+  <section class="intro">
+    <h3>A Modern Boutique Advisory Firm</h3>
     <p>
-        At Balmain Accountants, we believe accounting is more than compliance. Our approach focuses on building long-term relationships with clients through practical advice, financial insight and responsive service.
+      At Balmain Accountants, we believe accounting is more than compliance.
+      Our approach focuses on building long-term relationships with clients
+      through practical advice, financial insight and responsive service.
     </p>
+  </section>
 
-</section>
-
-<section class="dark-section">
-
-    <h2>Professional Advice. Personal Approach.</h2>
-
+  <section class="dark-section">
+    <h3>Professional Advice. Personal Approach.</h3>
     <p>
-        Our team provides tailored accounting, taxation and business advisory services for businesses, investors and individuals seeking long-term financial clarity and strategic support.
+      Our team provides tailored accounting, taxation and business advisory
+      services for businesses, investors and individuals seeking long-term
+      financial clarity and strategic support.
     </p>
+  </section>
 
-</section>
-
-<section class="stats">
-
+  <section class="stats">
     <div class="stats-inner">
-
-        <div>
-            <h2>20+</h2>
-            <p>Years Experience</p>
-        </div>
-
-        <div>
-            <h2>98%+</h2>
-            <p>Client Retention</p>
-        </div>
-
+      <div class="stat">
+        <h4>20+</h4>
+        <p>Years Experience</p>
+      </div>
+      <div class="stat">
+        <h4>98%+</h4>
+        <p>Client Retention</p>
+      </div>
     </div>
+  </section>
 
-</section>
-
-<section class="services-preview">
-
+  <section class="services-preview">
     <div class="services-inner">
+      <h3>Our Services</h3>
 
-        <h2>Our Services</h2>
-
-        <div class="cards">
-
-            <div class="card">
-                <h3>Taxation & Planning</h3>
-                <p>Tailored taxation support, compliance management and financial planning advice.</p>
-            </div>
-
-            <div class="card">
-                <h3>Business Advisory</h3>
-                <p>Strategic financial guidance helping businesses improve performance and growth.</p>
-            </div>
-
-            <div class="card">
-                <h3>Financial Reporting</h3>
-                <p>Clear financial statements, compliance reporting and business analysis.</p>
-            </div>
-
-            <div class="card">
-                <h3>Corporate Advisory</h3>
-                <p>Professional support for complex business, compliance and financial matters.</p>
-            </div>
-
+      <div class="cards">
+        <div class="card">
+          <h4>Taxation & Planning</h4>
+          <p>
+            Tailored taxation support, planning strategies and compliance
+            guidance for individuals and businesses.
+          </p>
         </div>
 
+        <div class="card">
+          <h4>Business Advisory</h4>
+          <p>
+            Strategic business advice to help clients make confident financial
+            decisions and improve performance.
+          </p>
+        </div>
+
+        <div class="card">
+          <h4>Financial Reporting</h4>
+          <p>
+            Professional financial statements and reporting solutions that keep
+            your business informed and compliant.
+          </p>
+        </div>
+
+        <div class="card">
+          <h4>Corporate Advisory</h4>
+          <p>
+            Practical support for corporate structures, transactions and more
+            complex financial matters.
+          </p>
+        </div>
+      </div>
     </div>
+  </section>
 
-</section>
+  <section class="cta">
+    <h3>Let’s build a better financial future for your business.</h3>
+    <a href="contact.html" class="hero-btn">Book Consultation</a>
+  </section>
 
-<section class="cta">
-
-    <h2>Let’s build a better financial future for your business.</h2>
-
-    <a href="contact.html" class="hero-btn">
-        Book Consultation
-    </a>
-
-</section>
-
-<footer>
+  <footer>
     © 2026 Balmain Accountants. All rights reserved.
-</footer>
+  </footer>
 
 </body>
 </html>
