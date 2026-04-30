@@ -349,15 +349,21 @@
 
       <h2>Send an Enquiry</h2>
 
-      <form>
+      <form action="https://formsubmit.co/luke@balmainacc.com.au" method="POST">
 
-        <input type="text" placeholder="Name*" required>
+        <input type="text" name="name" placeholder="Name*" required>
 
-        <input type="email" placeholder="Email*" required>
+        <input type="email" name="email" placeholder="Email*" required>
 
-        <input type="tel" placeholder="Phone">
+        <input type="tel" name="phone" placeholder="Phone">
 
-        <textarea placeholder="Message"></textarea>
+        <textarea name="message" placeholder="Message"></textarea>
+
+        <input type="hidden" name="_captcha" value="false">
+
+        <input type="hidden" name="_cc" value="laurig@balmainacc.com.au">
+
+        <input type="hidden" name="_next" value="https://balmain-accountants-website.vercel.app">
 
         <button class="btn" type="submit">
           Send Message
@@ -437,7 +443,7 @@
 
   <footer>
 
-    © 2020 Balmain Accountants. All rights reserved.
+    © 2026 Balmain Accountants. All rights reserved.
 
   </footer>
 
