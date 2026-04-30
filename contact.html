@@ -1,1 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Balmain Accountants</title>
+  <link rel="icon" type="image/png" href="balmain-logo.png">
 
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{background:#f7f7f7;color:#222;font-family:Arial,Helvetica,sans-serif}
+
+    nav{
+      width:100%;padding:20px 5%;display:flex;justify-content:space-between;align-items:center;
+      background:white;position:fixed;top:0;z-index:1000;box-shadow:0 2px 10px rgba(0,0,0,.05);gap:40px
+    }
+
+    .logo{display:flex;align-items:center;gap:16px;min-width:max-content}
+    .menu{display:flex;gap:45px;align-items:center;margin-left:auto}
+    .menu a{text-decoration:none;color:#333;font-weight:500;font-size:18px}
+    .menu a:hover{color:#ff6b00}
+
+    .btn{
+      background:#ff6b00;color:white;padding:16px 28px;border-radius:12px;
+      text-decoration:none;font-weight:bold;border:none;cursor:pointer
+    }
+
+    .hero{
+      padding:190px 5% 80px;text-align:center;background:white
+    }
+
+    .hero h1{
+      font-size:70px;font-family:Georgia,serif;color:#222;margin-bottom:20px
+    }
+
+    .hero p{
+      font-size:22px;color:#555;line-height:1.8
+    }
+
+    .orange{color:#ff6b00}
+
+    .contact-wrap{
+      padding:80px 5%;display:grid;grid-template-columns:1fr 1fr;gap:45px
+    }
+
+    .card{
+      background:white;border-radius:24px;padding:45px;box-shadow:0 20px 45px rgba(0,0,0,.06)
+    }
+
+    .card h2{
+      font-size:36px;font-family:Georgia,serif;margin-bottom:25px;color:#2f2f2f
+    }
+
+    input,textarea{
+      width:100%;padding:16px;margin-bottom:18px;border:1px solid #ddd;border-radius:10px;
+      font-size:16px;font-family:Arial,Helvetica,sans-serif
+    }
+
+    textarea{height:150px;resize:vertical}
+
+    .info p{
+      font-size:18px;line-height:1.9;color:#555;margin-bottom:12px
+    }
+
+    .info strong{color:#222}
+
+    .hours{
+      margin-top:28px;border-top:1px solid #eee;padding-top:25px
+    }
+
+    .map{
+      width:100%;height:460px;border:0;display:block
+    }
+
+    .social{
+      padding:70px 5%;text-align:center;background:white
+    }
+
+    .social h2{
+      font-size:42px;font-family:Georgia,serif;margin-bottom:20px
+    }
+
+    footer{
+      background:#111;color:white;padding:50px;text-align:center;font-size:16px
+    }
+
+    @media(max-width:980px){
+      nav{flex-direction:column;align-items:center;gap:25px}
+      .logo{flex-direction:column;text-align:center}
+      .menu{margin-left:0;flex-wrap:wrap;justify-content:center;gap:22px}
+      .hero{padding-top:280px}
+      .hero h1{font-size:48px}
+      .contact-wrap{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo">
+      <img src="balmain-logo.png" alt="Balmain Logo"
+           style="height:75px;width:75px;object-fit:cover;border-radius:50%;">
+
+      <div style="line-height:1.1;">
+        <div style="font-size:28px;font-weight:700;color:#2f2f2f;letter-spacing:0;font-family:Georgia,serif;">
+          BALMAIN ACCOUNTANTS
+        </div>
+        <div style="font-size:13px;color:#777;letter-spacing:2px;margin-top:6px;font-family:Georgia,serif;text-transform:uppercase;">
+          Solving Complex Financial Matters
+        </div>
+      </div>
+    </div>
+
+    <div class="menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="btn">Book Consultation</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h1>Contact <span class="orange">Us</span></h1>
+    <p>Drop us a line or visit us in person during normal business hours.</p>
+  </section>
+
+  <section class="contact-wrap">
+
+    <div class="card">
+      <h2>Send an Enquiry</h2>
+
+      <form>
+        <input type="text" placeholder="Name*" required>
+        <input type="email" placeholder="Email*" required>
+        <input type="tel" placeholder="Phone">
+        <textarea placeholder="Message"></textarea>
+        <button class="btn" type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <div class="card info">
+      <h2>Balmain Accountants Pty Limited</h2>
+
+      <p><strong>Address:</strong><br>Suite 6, 2A Booth Street, Balmain NSW 2041, Australia</p>
+      <p><strong>Office:</strong> <a href="tel:0295558800">02 9555 8800</a></p>
+      <p><strong>Mobile:</strong> <a href="tel:0447575501">0447 575 501</a></p>
+
+      <div class="hours">
+        <p><strong>Business Hours</strong></p>
+        <p>Monday: 7:30 am – 5:00 pm</p>
+        <p>Tuesday: 7:30 am – 5:00 pm</p>
+        <p>Wednesday: 7:30 am – 5:00 pm</p>
+        <p>Thursday: 7:30 am – 5:00 pm</p>
+        <p>Friday: 7:30 am – 5:00 pm</p>
+        <p>Saturday: Closed</p>
+        <p>Sunday: Closed</p>
+      </div>
+    </div>
+
+  </section>
+
+  <iframe
+    class="map"
+    src="https://www.google.com/maps?q=Suite%206%202A%20Booth%20Street%20Balmain%20NSW%202041%20Australia&output=embed">
+  </iframe>
+
+  <section class="social">
+    <h2>Social</h2>
+    <p>Connect with Balmain Accountants online.</p>
+  </section>
+
+  <footer>
+    © 2020 Balmain Accountants. All rights reserved.
+  </footer>
+
+</body>
+</html>
