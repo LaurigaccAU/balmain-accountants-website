@@ -1,452 +1,396 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Balmain Accountants</title>
+<link rel="icon" type="image/png" href="balmain-logo.png">
 
-  <title>Contact | Balmain Accountants</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <link rel="icon" type="image/png" href="balmain-logo.png">
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-  <style>
+body{
+  font-family:'Inter',sans-serif;
+  background:#f5f5f5;
+  color:#2b2b2b;
+}
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
+header{
+  background:white;
+  border-bottom:1px solid #ececec;
+  box-shadow:0 2px 12px rgba(0,0,0,0.04);
+}
 
-    body{
-      background:#f7f7f7;
-      color:#222;
-      font-family:Arial, Helvetica, sans-serif;
-    }
+.navbar{
+  max-width:1500px;
+  margin:auto;
+  padding:18px 60px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
 
-    nav{
-      width:100%;
-      padding:20px 5%;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      background:white;
-      position:fixed;
-      top:0;
-      z-index:1000;
-      box-shadow:0 2px 10px rgba(0,0,0,0.05);
-      gap:40px;
-    }
+.logo-section{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
 
-    .logo{
-      display:flex;
-      align-items:center;
-      gap:16px;
-      min-width:max-content;
-    }
+.logo-section img{
+  width:64px;
+  height:64px;
+  object-fit:cover;
+  border-radius:50%;
+}
 
-    .menu{
-      display:flex;
-      gap:35px;
-      align-items:center;
-      margin-left:auto;
-    }
+.logo-text h1{
+  font-family:'Cormorant Garamond',serif;
+  font-size:2.4rem;
+  line-height:1;
+  color:#303030;
+  letter-spacing:1px;
+}
 
-    .menu a{
-      text-decoration:none;
-      color:#333;
-      font-weight:500;
-      font-size:18px;
-      transition:0.3s;
-    }
+.logo-text p{
+  font-family:'Cormorant Garamond',serif;
+  letter-spacing:2px;
+  font-size:.95rem;
+  margin-top:4px;
+  color:#666;
+}
 
-    .menu a:hover{
-      color:#ff6b00;
-    }
+nav{
+  display:flex;
+  align-items:center;
+  gap:38px;
+}
 
-    .btn{
-      background:#ff6b00;
-      color:white;
-      padding:16px 28px;
-      border-radius:12px;
-      text-decoration:none;
-      font-weight:bold;
-      border:none;
-      cursor:pointer;
-      display:inline-block;
-      transition:0.3s;
-    }
+nav a{
+  text-decoration:none;
+  color:#333;
+  font-size:1.1rem;
+  transition:.3s;
+}
 
-    .btn:hover{
-      background:#e65f00;
-    }
+nav a:hover{
+  color:#ff6b00;
+}
 
-    .hero{
-      padding:200px 5% 90px;
-      text-align:center;
-      background:white;
-    }
+.btn{
+  background:#ff6b00;
+  color:white;
+  padding:16px 34px;
+  border-radius:14px;
+  text-decoration:none;
+  font-weight:600;
+  display:inline-block;
+  border:none;
+  cursor:pointer;
+}
 
-    .hero h1{
-      font-size:72px;
-      font-family:Georgia, serif;
-      margin-bottom:25px;
-      color:#222;
-    }
+.hero{
+  text-align:center;
+  padding:120px 60px 90px;
+}
 
-    .orange{
-      color:#ff6b00;
-    }
+.hero h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:5rem;
+  color:#222;
+  margin-bottom:30px;
+}
 
-    .hero p{
-      max-width:760px;
-      margin:auto;
-      font-size:22px;
-      color:#666;
-      line-height:1.8;
-    }
+.hero span{
+  color:#ff6b00;
+}
 
-    .contact-section{
-      padding:90px 5%;
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:45px;
-    }
+.hero p{
+  max-width:950px;
+  margin:auto;
+  font-size:1.35rem;
+  line-height:2;
+  color:#555;
+}
 
-    .card{
-      background:white;
-      padding:45px;
-      border-radius:25px;
-      box-shadow:0 20px 45px rgba(0,0,0,0.06);
-    }
+.contact-section{
+  max-width:1500px;
+  margin:auto;
+  padding:0 60px 120px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+}
 
-    .card h2{
-      font-size:44px;
-      margin-bottom:35px;
-      font-family:Georgia, serif;
-      color:#2f2f2f;
-    }
+.form-box,
+.info-box{
+  background:white;
+  border-radius:30px;
+  padding:55px;
+  box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
 
-    input,
-    textarea{
-      width:100%;
-      padding:18px;
-      margin-bottom:20px;
-      border:1px solid #ddd;
-      border-radius:12px;
-      font-size:17px;
-      font-family:Arial, Helvetica, sans-serif;
-      transition:0.3s;
-    }
+.form-box h3,
+.info-box h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:3rem;
+  margin-bottom:35px;
+  color:#222;
+}
 
-    input:focus,
-    textarea:focus{
-      outline:none;
-      border:1px solid #ff6b00;
-      box-shadow:0 0 0 4px rgba(255,107,0,0.12);
-    }
+input,
+textarea{
+  width:100%;
+  padding:20px;
+  margin-bottom:22px;
+  border:1px solid #ddd;
+  border-radius:16px;
+  font-size:1rem;
+  font-family:'Inter',sans-serif;
+}
 
-    textarea{
-      height:180px;
-      resize:vertical;
-    }
+textarea{
+  min-height:180px;
+  resize:vertical;
+}
 
-    .info p{
-      font-size:19px;
-      line-height:1.9;
-      color:#555;
-      margin-bottom:15px;
-    }
+.info-box p{
+  line-height:2;
+  margin-bottom:18px;
+  color:#555;
+  font-size:1.08rem;
+}
 
-    .info strong{
-      color:#222;
-    }
+.info-box strong{
+  color:#222;
+}
 
-    .hours{
-      margin-top:35px;
-      padding-top:30px;
-      border-top:1px solid #eee;
-    }
+.info-box a{
+  color:#ff6b00;
+  text-decoration:none;
+}
 
-    .hours h3{
-      font-size:28px;
-      margin-bottom:20px;
-      font-family:Georgia, serif;
-      color:#2f2f2f;
-    }
+.map{
+  width:100%;
+  border:none;
+  height:420px;
+  margin-top:30px;
+  border-radius:22px;
+}
 
-    .map{
-      width:100%;
-      height:500px;
-      border:0;
-      display:block;
-    }
+.social{
+  text-align:center;
+  padding:90px 60px 120px;
+}
 
-    .social{
-      padding:80px 5%;
-      background:white;
-      text-align:center;
-    }
+.social h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:4rem;
+  margin-bottom:40px;
+  color:#222;
+}
 
-    .social h2{
-      font-size:50px;
-      margin-bottom:20px;
-      font-family:Georgia, serif;
-    }
+.social a{
+  display:inline-block;
+  font-size:3rem;
+  color:#ff6b00;
+  text-decoration:none;
+  transition:.3s;
+}
 
-    .social p{
-      font-size:20px;
-      color:#666;
-    }
+.social a:hover{
+  transform:scale(1.1);
+}
 
-    .facebook-btn{
-      display:inline-flex;
-      align-items:center;
-      gap:12px;
-      background:#ff6b00;
-      color:white;
-      padding:18px 34px;
-      border-radius:14px;
-      text-decoration:none;
-      font-weight:bold;
-      margin-top:10px;
-      transition:0.3s;
-      font-size:18px;
-    }
+footer{
+  background:#111;
+  color:white;
+  text-align:center;
+  padding:45px;
+}
 
-    .facebook-btn:hover{
-      background:#e65f00;
-      transform:translateY(-3px);
-    }
+@media(max-width:1100px){
 
-    .facebook-icon{
-      width:34px;
-      height:34px;
-      background:white;
-      color:#ff6b00;
-      border-radius:50%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:24px;
-      font-weight:bold;
-      font-family:Arial;
-    }
+  .navbar{
+    flex-direction:column;
+    gap:30px;
+    text-align:center;
+  }
 
-    footer{
-      background:#111;
-      color:white;
-      padding:50px;
-      text-align:center;
-      font-size:16px;
-    }
+  nav{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
 
-    @media(max-width:980px){
+  .contact-section{
+    grid-template-columns:1fr;
+  }
+}
 
-      nav{
-        flex-direction:column;
-        align-items:center;
-        gap:25px;
-      }
+@media(max-width:700px){
 
-      .logo{
-        flex-direction:column;
-        text-align:center;
-      }
+  .navbar{
+    padding:18px 25px;
+  }
 
-      .menu{
-        margin-left:0;
-        flex-wrap:wrap;
-        justify-content:center;
-        gap:22px;
-      }
+  .logo-section{
+    flex-direction:column;
+    text-align:center;
+  }
 
-      .hero{
-        padding-top:280px;
-      }
+  .logo-text h1{
+    font-size:1.8rem;
+  }
 
-      .hero h1{
-        font-size:52px;
-      }
+  .hero{
+    padding:80px 25px 60px;
+  }
 
-      .contact-section{
-        grid-template-columns:1fr;
-      }
+  .hero h2{
+    font-size:3.5rem;
+  }
 
-    }
+  .contact-section{
+    padding:0 25px 80px;
+  }
 
-  </style>
+  .form-box,
+  .info-box{
+    padding:35px;
+  }
 
+  .form-box h3,
+  .info-box h3{
+    font-size:2.3rem;
+  }
+
+  .social{
+    padding:70px 25px 90px;
+  }
+
+  .social h2{
+    font-size:3rem;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <nav>
+<header>
+  <div class="navbar">
 
-    <div class="logo">
+    <div class="logo-section">
+      <img src="balmain-logo.png" alt="Balmain Accountants Logo">
 
-      <img src="balmain-logo.png"
-           alt="Balmain Logo"
-           style="height:75px; width:75px; object-fit:cover; border-radius:50%;">
-
-      <div style="line-height:1.1;">
-
-        <div style="
-          font-size:36px;
-          font-weight:700;
-          color:#2f2f2f;
-          letter-spacing:0px;
-          font-family:Georgia, serif;
-        ">
-          BALMAIN ACCOUNTANTS
-        </div>
-
-        <div style="
-          font-size:14px;
-          color:#777;
-          letter-spacing:2px;
-          margin-top:6px;
-          font-family:Georgia, serif;
-          text-transform:uppercase;
-        ">
-          Solving Complex Financial Matters
-        </div>
-
+      <div class="logo-text">
+        <h1>BALMAIN ACCOUNTANTS</h1>
+        <p>SOLVING COMPLEX FINANCIAL MATTERS</p>
       </div>
-
     </div>
 
-    <div class="menu">
-
+    <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
       <a href="contact.html">Contact</a>
+      <a href="contact.html" class="btn">Book Consultation</a>
+    </nav>
 
-      <a href="contact.html" class="btn">
-        Book Consultation
-      </a>
+  </div>
+</header>
 
-    </div>
+<section class="hero">
 
-  </nav>
+  <h2>Drop us a <span>line!</span></h2>
 
-  <section class="hero">
+  <p>
+    We would love to hear from you. Contact Balmain Accountants for professional taxation, advisory and accounting support tailored to your business.
+  </p>
 
-    <h1>
-      Drop us a <span class="orange">line!</span>
-    </h1>
+</section>
+
+<section class="contact-section">
+
+  <div class="form-box">
+
+    <h3>Send an Enquiry</h3>
+
+    <form action="https://formsubmit.co/luke@balmainacc.com.au" method="POST">
+
+      <input type="hidden" name="_cc" value="laurig@balmainacc.com.au">
+      <input type="hidden" name="_subject" value="New Website Enquiry - Balmain Accountants">
+      <input type="hidden" name="_captcha" value="false">
+
+      <input type="text" name="name" placeholder="Name*" required>
+
+      <input type="email" name="email" placeholder="Email*" required>
+
+      <input type="text" name="phone" placeholder="Phone">
+
+      <textarea name="message" placeholder="Message"></textarea>
+
+      <button type="submit" class="btn">Send Message</button>
+
+    </form>
+
+  </div>
+
+  <div class="info-box">
+
+    <h3>Balmain Accountants Pty Limited</h3>
 
     <p>
-      We would love to hear from you. Contact Balmain Accountants for professional taxation, advisory and accounting support tailored to your business.
+      <strong>Address:</strong><br>
+      Suite 6, 2A Booth Street, Balmain NSW 2041, Australia
     </p>
 
-  </section>
-
-  <section class="contact-section">
-
-    <div class="card">
-
-      <h2>Send an Enquiry</h2>
-
-      <form action="https://formsubmit.co/luke@balmainacc.com.au" method="POST">
-
-        <input type="text" name="name" placeholder="Name*" required>
-
-        <input type="email" name="email" placeholder="Email*" required>
-
-        <input type="tel" name="phone" placeholder="Phone">
-
-        <textarea name="message" placeholder="Message"></textarea>
-
-        <input type="hidden" name="_captcha" value="false">
-
-        <input type="hidden" name="_cc" value="laurig@balmainacc.com.au">
-
-        <input type="hidden" name="_next" value="https://balmain-accountants-website.vercel.app">
-
-        <button class="btn" type="submit">
-          Send Message
-        </button>
-
-      </form>
-
-    </div>
-
-    <div class="card info">
-
-      <h2>
-        Balmain Accountants Pty Limited
-      </h2>
-
-      <p>
-        <strong>Address:</strong><br>
-        Suite 6, 2A Booth Street, Balmain NSW 2041, Australia
-      </p>
-
-      <p>
-        <strong>Office:</strong>
-        <a href="tel:0295558800">02 9555 8800</a>
-      </p>
-
-      <p>
-        <strong>Mobile:</strong>
-        <a href="tel:0447575501">0447 575 501</a>
-      </p>
-
-      <div class="hours">
-
-        <h3>Business Hours</h3>
-
-        <p>Monday: 7:30 am – 5:00 pm</p>
-        <p>Tuesday: 7:30 am – 5:00 pm</p>
-        <p>Wednesday: 7:30 am – 5:00 pm</p>
-        <p>Thursday: 7:30 am – 5:00 pm</p>
-        <p>Friday: 7:30 am – 5:00 pm</p>
-        <p>Saturday: Closed</p>
-        <p>Sunday: Closed</p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <iframe
-    class="map"
-    src="https://www.google.com/maps?q=Suite%206%202A%20Booth%20Street%20Balmain%20NSW%202041%20Australia&output=embed">
-  </iframe>
-
-  <section class="social">
-
-    <h2>Follow Us</h2>
-
-    <p style="margin-bottom:30px;">
-      Connect with Balmain Accountants online.
+    <p>
+      <strong>Office:</strong>
+      <a href="tel:0295558800">02 9555 8800</a>
     </p>
 
-    <a 
-      href="https://www.facebook.com/BalmainAccountants/"
-      target="_blank"
-      class="facebook-btn"
-    >
+    <p>
+      <strong>Mobile:</strong>
+      <a href="tel:0447575501">0447 575 501</a>
+    </p>
 
-      <div class="facebook-icon">
-        f
-      </div>
+    <p>
+      <strong>Email:</strong><br>
+      <a href="mailto:luke@balmainacc.com.au">luke@balmainacc.com.au</a><br>
+      <a href="mailto:laurig@balmainacc.com.au">laurig@balmainacc.com.au</a>
+    </p>
 
-      Visit our Facebook
+    <iframe
+      class="map"
+      src="https://maps.google.com/maps?q=2A%20Booth%20Street%20Balmain%20NSW%202041&t=&z=15&ie=UTF8&iwloc=&output=embed"
+      allowfullscreen>
+    </iframe>
 
-    </a>
+  </div>
 
-  </section>
+</section>
 
-  <footer>
+<section class="social">
 
-    © 2026 Balmain Accountants. All rights reserved.
+  <h2>Follow Us</h2>
 
-  </footer>
+  <a href="https://www.facebook.com/BalmainAccountants/" target="_blank">
+    📘
+  </a>
+
+</section>
+
+<footer>
+  © 2026 Balmain Accountants. All rights reserved.
+</footer>
 
 </body>
-
 </html>
