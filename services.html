@@ -1,438 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Services | Balmain Accountants</title>
+  <title>Services | Balmain Accountants</title>
+  <link rel="icon" type="image/png" href="balmain-logo.png" />
 
-<link rel="icon" type="image/png" href="balmain-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    font-family:'Inter', sans-serif;
-    background:#f5f5f5;
-    color:#303030;
-}
-
-/* HEADER */
-
-header{
-    width:100%;
-    background:white;
-    border-bottom:1px solid #e5e5e5;
-}
-
-.navbar{
-    max-width:1500px;
-    margin:auto;
-    padding:16px 50px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.logo-section{
-    display:flex;
-    align-items:center;
-    gap:20px;
-}
-
-.logo-section img{
-    width:72px;
-    height:72px;
-    object-fit:cover;
-    border-radius:50%;
-}
-
-.logo-text h1{
-    font-family:'Cormorant Garamond', serif;
-    font-size:3.4rem;
-    font-weight:700;
-    line-height:0.9;
-    color:#303030;
-    letter-spacing:1px;
-}
-
-.logo-text p{
-    font-family:'Cormorant Garamond', serif;
-    font-size:1rem;
-    letter-spacing:3px;
-    color:#666;
-    margin-top:6px;
-}
-
-nav{
-    display:flex;
-    align-items:center;
-    gap:42px;
-}
-
-nav a{
-    text-decoration:none;
-    color:#303030;
-    font-size:1.15rem;
-    transition:0.3s;
-}
-
-nav a:hover{
-    color:#ff6b00;
-}
-
-.book-btn,
-.hero-btn{
-    background:#ff6b00;
-    color:white;
-    padding:18px 34px;
-    border-radius:12px;
-    text-decoration:none;
-    font-weight:600;
-    transition:0.3s;
-    display:inline-block;
-}
-
-.book-btn:hover,
-.hero-btn:hover{
-    transform:translateY(-2px);
-    box-shadow:0 10px 20px rgba(0,0,0,0.08);
-}
-
-/* HERO */
-
-.services-hero{
-    text-align:center;
-    padding:110px 50px 70px;
-}
-
-.services-hero h1{
-    font-family:'Cormorant Garamond', serif;
-    font-size:5.2rem;
-    line-height:1;
-    margin-bottom:30px;
-    color:#222;
-}
-
-.orange{
-    color:#ff6b00;
-}
-
-.services-hero p{
-    max-width:1000px;
-    margin:auto;
-    font-size:1.25rem;
-    line-height:2;
-    color:#555;
-}
-
-/* SERVICES */
-
-.services-section{
-    max-width:1400px;
-    margin:auto;
-    padding:20px 50px 110px;
-}
-
-.services-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:40px;
-}
-
-.service-card{
-    background:white;
-    border-radius:28px;
-    padding:50px;
-    border-top:5px solid #ff6b00;
-    box-shadow:0 10px 30px rgba(0,0,0,0.05);
-    transition:0.3s;
-}
-
-.service-card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 18px 35px rgba(0,0,0,0.08);
-}
-
-.service-card h2{
-    font-family:'Cormorant Garamond', serif;
-    font-size:3.2rem;
-    margin-bottom:28px;
-    color:#222;
-    line-height:1;
-}
-
-.service-card p{
-    font-size:1.08rem;
-    line-height:2;
-    color:#555;
-    margin-bottom:22px;
-}
-
-.service-card ul{
-    padding-left:22px;
-}
-
-.service-card li{
-    margin-bottom:14px;
-    line-height:1.8;
-    color:#444;
-}
-
-/* CTA */
-
-.cta{
-    background:#1f1f1f;
-    color:white;
-    text-align:center;
-    padding:110px 50px;
-}
-
-.cta h2{
-    font-family:'Cormorant Garamond', serif;
-    font-size:4.5rem;
-    margin-bottom:30px;
-}
-
-.cta p{
-    max-width:950px;
-    margin:auto;
-    color:#ddd;
-    font-size:1.25rem;
-    line-height:2;
-    margin-bottom:40px;
-}
-
-/* FOOTER */
-
-footer{
-    background:#111;
-    color:white;
-    text-align:center;
-    padding:45px;
-}
-
-/* MOBILE */
-
-@media(max-width:1200px){
-
-    .navbar{
-        flex-direction:column;
-        gap:30px;
-        text-align:center;
-    }
-
-    nav{
-        flex-wrap:wrap;
-        justify-content:center;
-    }
-
-    .services-grid{
-        grid-template-columns:1fr;
-    }
-
-}
-
-@media(max-width:700px){
-
-    .navbar{
-        padding:25px;
-    }
-
-    .logo-section{
-        flex-direction:column;
-        text-align:center;
-    }
-
-    .logo-text h1{
-        font-size:2.3rem;
-    }
-
-    .logo-text p{
-        font-size:0.85rem;
-    }
-
-    nav{
-        gap:25px;
-    }
-
-    .services-hero{
-        padding:80px 25px 50px;
-    }
-
-    .services-hero h1{
-        font-size:3.4rem;
-    }
-
-    .services-section{
-        padding:20px 25px 75px;
-    }
-
-    .service-card{
-        padding:35px;
-    }
-
-    .service-card h2{
-        font-size:2.5rem;
-    }
-
-    .cta{
-        padding:75px 25px;
-    }
-
-    .cta h2{
-        font-size:3rem;
-    }
-
-}
-
-</style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
 <header>
-
-    <div class="navbar">
-
-        <div class="logo-section">
-
-            <img src="balmain-logo.png" alt="Balmain Accountants Logo">
-
-            <div class="logo-text">
-                <h1>BALMAIN ACCOUNTANTS</h1>
-                <p>SOLVING COMPLEX FINANCIAL MATTERS</p>
-            </div>
-
-        </div>
-
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="contact.html">Contact</a>
-
-            <a href="contact.html" class="book-btn">
-                Book Consultation
-            </a>
-        </nav>
-
+  <div class="navbar">
+    <div class="logo-section">
+      <img src="balmain-logo.png" alt="Balmain Accountants Logo" />
+      <div class="logo-text">
+        <h1>BALMAIN ACCOUNTANTS</h1>
+        <p>SOLVING COMPLEX FINANCIAL MATTERS</p>
+      </div>
     </div>
 
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a class="book-btn" href="contact.html">Book Consultation →</a>
+    </nav>
+  </div>
 </header>
 
-<section class="services-hero">
+<section class="page-hero">
+  <h2>Our Professional <span class="orange">Services</span></h2>
+  <p>
+    Balmain Accountants provides taxation, advisory, compliance and business support services for private clients, companies and growing businesses.
+  </p>
+</section>
 
-    <h1>
-        Our Professional <span class="orange">Services</span>
-    </h1>
+<section class="services-page">
 
+  <div class="service-box">
+    <h3>Taxation and Planning</h3>
     <p>
-        Balmain Accountants provides taxation, advisory, compliance and business support services for private clients, companies and growing businesses.
+      The Australian taxation system is complex and constantly changing. Balmain Accountants provides tailored taxation solutions to meet the needs of each client.
     </p>
+    <ul>
+      <li>Financial reporting and compliance management</li>
+      <li>Review of business structures</li>
+      <li>Succession planning</li>
+      <li>Property transactions</li>
+      <li>Research and development concessions</li>
+      <li>Refinancing or new finance</li>
+      <li>Superannuation planning</li>
+    </ul>
+  </div>
+
+  <div class="service-box">
+    <h3>Business Advisory</h3>
+    <p>
+      Our service extends beyond traditional accounting services. We work closely with clients to identify issues requiring attention and implement practical strategies.
+    </p>
+    <p>
+      With expertise across a variety of business activities, Balmain Accountants provides strategic financial guidance tailored to business growth and long-term performance.
+    </p>
+  </div>
+
+  <div class="service-box">
+    <h3>Audit and Corporate Advisory</h3>
+    <p>
+      Balmain Accountants has knowledge and auditing experience across a wide range of industries and corporate structures.
+    </p>
+    <ul>
+      <li>Statutory Act audits</li>
+      <li>Listing audits</li>
+      <li>Building Services Authority audits</li>
+      <li>Investigative and forensic auditing</li>
+      <li>Due diligence reviews</li>
+    </ul>
+  </div>
+
+  <div class="service-box">
+    <h3>Project Development and Funding</h3>
+    <p>
+      We specialise in property development financial control, feasibility planning and strategic project support for construction and financing matters.
+    </p>
+    <p>
+      Our experience includes projects with significant development values requiring ongoing financial management, reporting and compliance support.
+    </p>
+  </div>
 
 </section>
 
-<section class="services-section">
-
-    <div class="services-grid">
-
-        <div class="service-card">
-
-            <h2>Taxation and Planning</h2>
-
-            <p>
-                The Australian taxation system is complex and constantly changing. Balmain Accountants provides tailored taxation solutions to meet the needs of each individual client.
-            </p>
-
-            <ul>
-                <li>Financial reporting and compliance management</li>
-                <li>Review of business structures</li>
-                <li>Succession planning</li>
-                <li>Property transactions</li>
-                <li>Research and development concessions</li>
-                <li>Refinancing or new finance</li>
-                <li>Superannuation planning</li>
-            </ul>
-
-        </div>
-
-        <div class="service-card">
-
-            <h2>Business Advisory</h2>
-
-            <p>
-                Our service extends beyond traditional accounting services. We work closely with clients to identify issues requiring attention and implement practical strategies.
-            </p>
-
-            <p>
-                With expertise across a variety of business activities, Balmain Accountants provides strategic financial guidance tailored to business growth and long-term performance.
-            </p>
-
-        </div>
-
-        <div class="service-card">
-
-            <h2>Audit and Corporate Advisory</h2>
-
-            <p>
-                Balmain Accountants has knowledge and auditing experience across a wide range of industries and corporate structures.
-            </p>
-
-            <ul>
-                <li>Statutory Act audits</li>
-                <li>Listing audits</li>
-                <li>Building Services Authority audits</li>
-                <li>Investigative and forensic auditing</li>
-                <li>Due diligence reviews</li>
-            </ul>
-
-        </div>
-
-        <div class="service-card">
-
-            <h2>Project Development and Funding</h2>
-
-            <p>
-                We specialise in property development financial control, feasibility planning and strategic project support for construction and financing matters.
-            </p>
-
-            <p>
-                Our experience includes projects with significant development values requiring ongoing financial management, reporting and compliance support.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-<section class="cta">
-
-    <h2>Strategic financial guidance for modern businesses.</h2>
-
-    <p>
-        Speak with Balmain Accountants for tailored taxation, accounting and advisory support designed to help your business move forward with clarity and confidence.
-    </p>
-
-    <a href="contact.html" class="hero-btn">
-        Book Consultation
-    </a>
-
+<section class="dark-cta">
+  <h3>Strategic financial guidance for modern businesses.</h3>
+  <p>
+    Speak with Balmain Accountants for tailored taxation, accounting and advisory support designed to help your business move forward with clarity and confidence.
+  </p>
+  <a href="contact.html" class="book-btn">Book Consultation</a>
 </section>
 
 <footer>
-    © 2026 Balmain Accountants. All rights reserved.
+  © 2026 Balmain Accountants. All rights reserved.
 </footer>
 
 </body>
