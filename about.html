@@ -1,1 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>About | Balmain Accountants</title>
+
+  <link rel="icon" type="image/png" href="balmain-logo.png">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:Arial, Helvetica, sans-serif;
+      background:#f7f7f7;
+      color:#222;
+    }
+
+    nav{
+      width:100%;
+      padding:20px 6%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      background:white;
+      position:fixed;
+      top:0;
+      z-index:1000;
+      box-shadow:0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:18px;
+    }
+
+    .menu{
+      display:flex;
+      gap:35px;
+      align-items:center;
+    }
+
+    .menu a{
+      text-decoration:none;
+      color:#333;
+      font-weight:500;
+    }
+
+    .menu a:hover{
+      color:#ff6b00;
+    }
+
+    .btn{
+      background:#ff6b00;
+      color:white;
+      padding:14px 26px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:bold;
+    }
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:180px 6% 100px;
+      gap:60px;
+      background:white;
+    }
+
+    .hero-left{
+      flex:1;
+    }
+
+    .hero-left img{
+      width:100%;
+      border-radius:20px;
+      box-shadow:0 20px 40px rgba(0,0,0,0.1);
+    }
+
+    .hero-right{
+      flex:1;
+    }
+
+    .hero-right h1{
+      font-size:62px;
+      margin-bottom:30px;
+      font-family:Georgia, serif;
+      color:#2f2f2f;
+      line-height:1.1;
+    }
+
+    .hero-right p{
+      font-size:22px;
+      line-height:1.8;
+      color:#555;
+      margin-bottom:30px;
+    }
+
+    .highlight{
+      color:#ff6b00;
+      font-weight:bold;
+    }
+
+    .section{
+      padding:120px 6%;
+      text-align:center;
+    }
+
+    .section h2{
+      font-size:55px;
+      margin-bottom:30px;
+      font-family:Georgia, serif;
+      color:#2f2f2f;
+    }
+
+    .section p{
+      max-width:1000px;
+      margin:auto;
+      line-height:2;
+      font-size:21px;
+      color:#555;
+    }
+
+    footer{
+      background:#111;
+      color:white;
+      padding:50px;
+      text-align:center;
+    }
+
+    @media(max-width:950px){
+
+      nav{
+        flex-direction:column;
+        gap:20px;
+      }
+
+      .hero{
+        flex-direction:column;
+        text-align:center;
+      }
+
+      .hero-right h1{
+        font-size:45px;
+      }
+
+      .menu{
+        flex-wrap:wrap;
+        justify-content:center;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <nav>
+
+    <div class="logo">
+
+      <img src="balmain-logo.png"
+           alt="Balmain Logo"
+           style="height:75px; width:75px; object-fit:cover; border-radius:50%;">
+
+      <div style="line-height:1.1;">
+
+        <div style="
+          font-size:42px;
+          font-weight:700;
+          color:#2f2f2f;
+          letter-spacing:1px;
+          font-family:Georgia, serif;
+        ">
+          BALMAIN ACCOUNTANTS
+        </div>
+
+        <div style="
+          font-size:15px;
+          color:#777;
+          letter-spacing:2px;
+          margin-top:6px;
+          font-family:Georgia, serif;
+          text-transform:uppercase;
+        ">
+          Solving Complex Financial Matters
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="menu">
+
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+
+      <a href="#" class="btn">Book Consultation</a>
+
+    </div>
+
+  </nav>
+
+  <section class="hero">
+
+    <div class="hero-left">
+
+      <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1600&auto=format&fit=crop">
+
+    </div>
+
+    <div class="hero-right">
+
+      <h1>
+        Welcome to Balmain Accountants
+      </h1>
+
+      <p>
+        Balmain Accountants is well regarded in providing professional services to listed and private companies and high net worth clients, with a focus on extended services and specialising in <span class="highlight">“Account Empathy”</span>.
+      </p>
+
+      <p>
+        We combine strategic advisory, taxation expertise and modern accounting solutions to support businesses and individuals with clarity, professionalism and trust.
+      </p>
+
+    </div>
+
+  </section>
+
+  <section class="section">
+
+    <h2>
+      A Modern Boutique Advisory Firm
+    </h2>
+
+    <p>
+      At Balmain Accountants, we believe accounting is more than compliance. Our approach focuses on building long-term relationships with clients through practical advice, financial insight and responsive service. We assist businesses and individuals with taxation, financial reporting, cloud accounting, advisory and strategic planning tailored to each client’s objectives.
+    </p>
+
+  </section>
+
+  <footer>
+
+    © 2026 Balmain Accountants. All rights reserved.
+
+  </footer>
+
+</body>
+
+</html>
