@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
   <title>Balmain Accountants</title>
 
+  <link rel="icon" type="image/png" href="balmain-logo.png">
+
   <style>
+
     *{
       margin:0;
       padding:0;
       box-sizing:border-box;
-      font-family:Arial, Helvetica, sans-serif;
     }
 
     body{
       background:#f7f7f7;
       color:#222;
+      font-family:Arial, Helvetica, sans-serif;
     }
 
     nav{
       width:100%;
-      padding:25px 8%;
+      padding:20px 6%;
       display:flex;
       justify-content:space-between;
       align-items:center;
@@ -32,29 +38,40 @@
     }
 
     .logo{
-      font-size:28px;
-      font-weight:bold;
-      color:#ff6b00;
+      display:flex;
+      align-items:center;
+      gap:18px;
     }
 
     .menu{
       display:flex;
-      gap:30px;
+      gap:35px;
+      align-items:center;
     }
 
     .menu a{
       text-decoration:none;
       color:#333;
       font-weight:500;
+      transition:0.3s;
+    }
+
+    .menu a:hover{
+      color:#ff6b00;
     }
 
     .btn{
       background:#ff6b00;
       color:white;
-      padding:14px 24px;
+      padding:14px 26px;
       border-radius:10px;
       text-decoration:none;
       font-weight:bold;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#e65f00;
     }
 
     .hero{
@@ -62,8 +79,8 @@
       display:flex;
       align-items:center;
       justify-content:space-between;
-      padding:140px 8% 80px;
-      gap:50px;
+      padding:180px 6% 100px;
+      gap:60px;
     }
 
     .hero-left{
@@ -71,9 +88,10 @@
     }
 
     .hero-left h1{
-      font-size:70px;
+      font-size:72px;
       line-height:1.1;
       margin-bottom:30px;
+      font-family:Georgia, serif;
     }
 
     .orange{
@@ -81,10 +99,11 @@
     }
 
     .hero-left p{
-      font-size:20px;
+      font-size:21px;
       line-height:1.7;
       color:#666;
       margin-bottom:40px;
+      max-width:700px;
     }
 
     .hero-right{
@@ -93,116 +112,184 @@
 
     .hero-right img{
       width:100%;
-      border-radius:20px;
+      border-radius:25px;
       box-shadow:0 20px 50px rgba(0,0,0,0.15);
     }
 
     .services{
-      padding:100px 8%;
+      padding:120px 6%;
       background:white;
     }
 
     .services h2{
-      font-size:50px;
-      margin-bottom:50px;
+      font-size:55px;
+      margin-bottom:60px;
+      font-family:Georgia, serif;
     }
 
     .cards{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
       gap:30px;
     }
 
     .card{
       background:#f9f9f9;
-      padding:40px;
-      border-radius:20px;
+      padding:45px;
+      border-radius:22px;
       transition:0.3s;
     }
 
     .card:hover{
       transform:translateY(-10px);
+      box-shadow:0 20px 40px rgba(0,0,0,0.08);
     }
 
     .card h3{
       margin-bottom:20px;
       color:#ff6b00;
+      font-size:26px;
+      font-family:Georgia, serif;
+    }
+
+    .card p{
+      line-height:1.8;
+      color:#555;
     }
 
     .stats{
       background:#1f1f1f;
       color:white;
-      padding:80px 8%;
+      padding:90px 6%;
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
       text-align:center;
-      gap:30px;
+      gap:40px;
     }
 
     .stats h2{
-      font-size:50px;
+      font-size:58px;
       color:#ff6b00;
+      margin-bottom:10px;
+      font-family:Georgia, serif;
+    }
+
+    .stats p{
+      color:#ddd;
+      letter-spacing:1px;
     }
 
     .cta{
-      padding:120px 8%;
+      padding:130px 6%;
       text-align:center;
     }
 
     .cta h2{
-      font-size:55px;
-      margin-bottom:30px;
+      font-size:60px;
+      margin-bottom:35px;
+      font-family:Georgia, serif;
+      line-height:1.2;
     }
 
     footer{
       background:#111;
       color:white;
-      padding:40px 8%;
+      padding:50px 6%;
       text-align:center;
+      font-size:15px;
     }
 
-    @media(max-width:900px){
-
-      .hero{
-        flex-direction:column;
-      }
+    @media(max-width:1200px){
 
       .hero-left h1{
-        font-size:50px;
+        font-size:58px;
       }
 
       .menu{
-        display:none;
+        gap:20px;
+      }
+
+    }
+
+    @media(max-width:950px){
+
+      nav{
+        flex-direction:column;
+        gap:20px;
+      }
+
+      .hero{
+        flex-direction:column;
+        text-align:center;
+        padding-top:260px;
+      }
+
+      .hero-left h1{
+        font-size:48px;
+      }
+
+      .menu{
+        flex-wrap:wrap;
+        justify-content:center;
+      }
+
+      .logo{
+        flex-direction:column;
+        text-align:center;
       }
 
     }
 
   </style>
+
 </head>
 
 <body>
 
   <nav>
 
-<div class="logo" style="display:flex; align-items:center; gap:15px;">
+    <div class="logo">
 
-  <img src="balmain-logo.png" 
-       alt="Balmain Logo" 
-       style="height:70px; width:auto; border-radius:50%;">
+      <img src="balmain-logo.png"
+           alt="Balmain Logo"
+           style="height:75px; width:75px; object-fit:cover; border-radius:50%;">
 
-  <div style="line-height:1;">
-    <div style="font-size:32px; font-weight:bold; color:#222;">
-      BALMAIN
+      <div style="line-height:1.1;">
+
+        <div style="
+          font-size:42px;
+          font-weight:700;
+          color:#6b6b6b;
+          letter-spacing:1px;
+          font-family:Georgia, serif;
+        ">
+          BALMAIN ACCOUNTANTS
+        </div>
+
+        <div style="
+          font-size:15px;
+          color:#777;
+          letter-spacing:1px;
+          margin-top:4px;
+          font-family:Georgia, serif;
+        ">
+          Suite 6 2A Booth Street, BALMAIN NSW 2039
+        </div>
+
+      </div>
+
     </div>
 
-    <div style="font-size:14px; letter-spacing:3px; color:#666;">
-      ACCOUNTANTS
+    <div class="menu">
+
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Industries</a>
+      <a href="#">Contact</a>
+
+      <a href="#" class="btn">Book Consultation</a>
+
     </div>
-  </div>
-
-</div>
-
-    <a href="#" class="btn">Book Consultation</a>
 
   </nav>
 
@@ -211,11 +298,13 @@
     <div class="hero-left">
 
       <h1>
-        Strategic financial advice for <span class="orange">ambitious</span> businesses.
+        Strategic financial advice for
+        <span class="orange">ambitious</span>
+        businesses.
       </h1>
 
       <p>
-        Modern accounting, tax and advisory solutions helping Australian businesses grow with confidence.
+        Modern accounting, taxation and advisory solutions helping Australian businesses grow with confidence and clarity.
       </p>
 
       <a href="#" class="btn">Our Services</a>
@@ -224,7 +313,7 @@
 
     <div class="hero-right">
 
-      <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1400&auto=format&fit=crop" />
+      <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1400&auto=format&fit=crop">
 
     </div>
 
@@ -238,22 +327,30 @@
 
       <div class="card">
         <h3>Business Advisory</h3>
-        <p>Strategic financial advice and growth planning for businesses.</p>
+        <p>
+          Strategic financial advice, growth planning and business performance consulting.
+        </p>
       </div>
 
       <div class="card">
         <h3>Taxation Services</h3>
-        <p>Company, trust, BAS and individual tax compliance solutions.</p>
+        <p>
+          Company, trust, BAS, GST and individual taxation compliance solutions.
+        </p>
       </div>
 
       <div class="card">
         <h3>Cloud Accounting</h3>
-        <p>Xero bookkeeping, payroll, automation and reporting systems.</p>
+        <p>
+          Xero bookkeeping, payroll, automation and financial reporting systems.
+        </p>
       </div>
 
       <div class="card">
         <h3>Property Accounting</h3>
-        <p>Investment property and capital gains tax advisory services.</p>
+        <p>
+          Investment property tax advisory and capital gains tax support.
+        </p>
       </div>
 
     </div>
@@ -286,9 +383,13 @@
 
   <section class="cta">
 
-    <h2>Let's build a better future for your business.</h2>
+    <h2>
+      Let's build a better future for your business.
+    </h2>
 
-    <a href="#" class="btn">Book Consultation</a>
+    <a href="#" class="btn">
+      Book Consultation
+    </a>
 
   </section>
 
@@ -299,4 +400,5 @@
   </footer>
 
 </body>
+
 </html>
