@@ -26,7 +26,7 @@
 
     nav{
       width:100%;
-      padding:20px 6%;
+      padding:20px 5%;
       display:flex;
       justify-content:space-between;
       align-items:center;
@@ -35,25 +35,28 @@
       top:0;
       z-index:1000;
       box-shadow:0 2px 10px rgba(0,0,0,0.05);
+      gap:40px;
     }
 
-    ..logo{
-  display:flex;
-  align-items:center;
-  gap:14px;
-  flex:1;
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      min-width:max-content;
     }
 
     .menu{
       display:flex;
       gap:35px;
       align-items:center;
+      margin-left:auto;
     }
 
     .menu a{
       text-decoration:none;
       color:#333;
       font-weight:500;
+      font-size:18px;
     }
 
     .menu a:hover{
@@ -63,8 +66,8 @@
     .btn{
       background:#ff6b00;
       color:white;
-      padding:14px 26px;
-      border-radius:10px;
+      padding:16px 28px;
+      border-radius:12px;
       text-decoration:none;
       font-weight:bold;
     }
@@ -74,38 +77,35 @@
       display:flex;
       align-items:center;
       justify-content:center;
-      padding:180px 6% 100px;
-      gap:60px;
+      padding:190px 5% 100px;
+      gap:70px;
       background:white;
     }
 
-    .hero-left{
+    .hero-left,
+    .hero-right{
       flex:1;
     }
 
     .hero-left img{
       width:100%;
-      border-radius:20px;
-      box-shadow:0 20px 40px rgba(0,0,0,0.1);
-    }
-
-    .hero-right{
-      flex:1;
+      border-radius:25px;
+      box-shadow:0 20px 45px rgba(0,0,0,0.12);
     }
 
     .hero-right h1{
-      font-size:62px;
-      margin-bottom:30px;
+      font-size:68px;
+      margin-bottom:35px;
       font-family:Georgia, serif;
-      color:#2f2f2f;
+      color:#222;
       line-height:1.1;
     }
 
     .hero-right p{
       font-size:22px;
-      line-height:1.8;
+      line-height:1.9;
       color:#555;
-      margin-bottom:30px;
+      margin-bottom:28px;
     }
 
     .highlight{
@@ -114,23 +114,36 @@
     }
 
     .section{
-      padding:120px 6%;
+      padding:120px 5%;
       text-align:center;
     }
 
     .section h2{
-      font-size:55px;
-      margin-bottom:30px;
+      font-size:60px;
+      margin-bottom:35px;
       font-family:Georgia, serif;
-      color:#2f2f2f;
+      color:#222;
     }
 
     .section p{
       max-width:1000px;
       margin:auto;
       line-height:2;
-      font-size:21px;
+      font-size:22px;
       color:#555;
+    }
+
+    .dark{
+      background:#1f1f1f;
+      color:white;
+    }
+
+    .dark h2{
+      color:white;
+    }
+
+    .dark p{
+      color:#ddd;
     }
 
     footer{
@@ -138,27 +151,37 @@
       color:white;
       padding:50px;
       text-align:center;
+      font-size:16px;
     }
 
-    @media(max-width:950px){
+    @media(max-width:980px){
 
       nav{
         flex-direction:column;
-        gap:20px;
+        align-items:center;
+        gap:25px;
+      }
+
+      .logo{
+        flex-direction:column;
+        text-align:center;
+      }
+
+      .menu{
+        margin-left:0;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:22px;
       }
 
       .hero{
         flex-direction:column;
         text-align:center;
+        padding-top:280px;
       }
 
       .hero-right h1{
-        font-size:45px;
-      }
-
-      .menu{
-        flex-wrap:wrap;
-        justify-content:center;
+        font-size:52px;
       }
 
     }
@@ -179,24 +202,41 @@
 
       <div style="line-height:1.1;">
 
-        <div style="line-height:1.1;">
-        <div style="font-size:34px;font-weight:700;color:#2f2f2f;letter-spacing:0;font-family:Georgia,serif;">
+        <div style="
+          font-size:36px;
+          font-weight:700;
+          color:#2f2f2f;
+          letter-spacing:0px;
+          font-family:Georgia, serif;
+        ">
           BALMAIN ACCOUNTANTS
         </div>
-        <div style="font-size:14px;color:#777;letter-spacing:2px;margin-top:6px;font-family:Georgia,serif;text-transform:uppercase;">
+
+        <div style="
+          font-size:14px;
+          color:#777;
+          letter-spacing:2px;
+          margin-top:6px;
+          font-family:Georgia, serif;
+          text-transform:uppercase;
+        ">
           Solving Complex Financial Matters
         </div>
+
       </div>
+
     </div>
 
-      <div class="menu">
+    <div class="menu">
 
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
       <a href="contact.html">Contact</a>
 
-      <a href="#" class="btn">Book Consultation</a>
+      <a href="contact.html" class="btn">
+        Book Consultation
+      </a>
 
     </div>
 
@@ -235,14 +275,26 @@
     </h2>
 
     <p>
-      At Balmain Accountants, we believe accounting is more than compliance. Our approach focuses on building long-term relationships with clients through practical advice, financial insight and responsive service. We assist businesses and individuals with taxation, financial reporting, cloud accounting, advisory and strategic planning tailored to each client’s objectives.
+      At Balmain Accountants, we believe accounting is more than compliance. Our approach focuses on building long-term relationships with clients through practical advice, financial insight and responsive service.
+    </p>
+
+  </section>
+
+  <section class="section dark">
+
+    <h2>
+      Professional Advice. Personal Approach.
+    </h2>
+
+    <p>
+      Our team provides tailored accounting, taxation and business advisory services for businesses, investors and individuals seeking long-term financial clarity and strategic support.
     </p>
 
   </section>
 
   <footer>
 
-    © 2020 Balmain Accountants. All rights reserved.
+    © 2026 Balmain Accountants. All rights reserved.
 
   </footer>
 
